@@ -1,0 +1,838 @@
+
+                /* PC Interface */
+
+
+
+            /* HEADER */
+
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                width: 100%;
+                height: 90px;
+                padding: 40px;
+            
+                background-color: #02182956;
+                box-shadow: 0 12px 10px rgba(0, 3, 8, 0.419);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            nav {
+                padding: 20px;
+                border-radius: 8px;
+            }
+            ul {
+                list-style-type: none;
+
+                padding: 0;
+                margin: 0;
+
+                display: flex;
+                gap: 35px;
+            }
+            li {
+                position: relative;
+            }
+            .page-link {
+                text-decoration: none;
+                color: #ffffff;
+
+                font-size: 22px;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            .page-link:hover {
+                color: #053d79;
+            }
+            .indicator {
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #007bff;
+                transition: width 0.3s ease;
+            }
+            li:hover .indicator {
+                width: 100%;
+            }
+
+
+            header.hidden {
+                transform: translateY(-100%);
+            }
+
+    .h1 {
+        font-size: 3rem;
+        color: white;
+        font-family: "Montserrat";
+    }
+    header h1 {
+        font-size: 48px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+            
+            a img {
+                transition: transform 0.3s ease;
+            }
+            
+            a img:hover {
+                transform: scale(1.1); /* Збільшує зображення при наведенні */
+            }
+            
+            .nav-points {
+                display: inline;
+            }
+
+    .right-header {
+        display: flex;
+    }
+            
+            .nav-text-bef, .nav-text-mid, .nav-text-aft {
+                display: flex;
+                justify-items: right;
+                margin-right: 30px;
+                padding-top: 10px;
+            
+                font-size: 20px;
+                font-weight: 499;
+                font-family: "Manrope";
+            
+                border-bottom: 2px solid transparent;
+                transition: border-bottom 0.3s ease;
+            }
+            
+            .nav-text-aft:hover, .nav-text-mid:hover, .nav-text-bef:hover {
+                border-bottom: 2px solid #007bff; /* Колір підкреслення при наведенні */
+            }
+
+    .button {
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        padding-block: 0.5rem;
+        padding-inline: 1.25rem;
+    
+        background-color: #0095af;
+        border-radius: 99px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffff;
+        gap: 10px;
+    
+        font-weight: bold;
+        border: 3px solid #ffffff4d;
+        outline: none;
+        overflow: hidden;
+        font-size: 15px;
+        cursor: pointer;
+        }
+        
+        .icon {
+        width: 24px;
+        height: 24px;
+        transition: all 0.3s ease-in-out;
+        }
+.button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+    }
+    
+    .button:hover .icon {
+    transform: translate(4px);
+    }
+    
+    .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+    }
+    
+    .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+    }
+    
+    @keyframes shine {
+    0% {
+        left: -100px;
+    }
+    
+    60% {
+        left: 100%;
+    }
+    
+    to {
+        left: 100%;
+    }
+    }
+        
+            .login {
+                font-size: 25px;
+                font-family: "Exo 2";
+
+                border-radius: 5px;
+
+                margin-right: 15px;
+            }
+
+            .social-icons {
+                display: inherit;
+                margin-left: 75px;
+                margin-right: 10px;
+                padding-top: 3.75px;
+            
+                gap: 25px;
+            }
+            
+            .header-content {
+                font-family: "Manrope";
+            
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            
+                padding-bottom: 15px;
+            }
+            
+            .logo {
+                font-size: 40px;
+                font-family: "Exo 2";
+                font-weight: 400;
+            
+                padding-top: 8.5px;
+                margin-left: 25px;
+            
+                text-decoration: none;
+                color: #e9f0eb;  /* Колір самого тексту */
+                text-shadow: 
+                    0 0 5px rgba(255, 255, 255, 0.5),
+                    0 0 10px rgba(255, 255, 255, 0.5),
+                    0 0 15px rgba(255, 255, 255, 0.5),   
+                    0 0 20px rgba(255, 255, 255, 0.5);   
+                animation: glow 1.5s ease-in-out infinite; /* Анімація для пульсуючого ефекту */
+            }
+            
+            @keyframes glow {
+                0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5); }
+                50% { text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.6); }
+                100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5); }
+            }
+            
+            .black-line {
+                background-color: transparent;
+            }
+            
+        /* HEADER */
+
+
+            /* BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Manrope";
+    color: #ffffff;
+
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; 
+
+    /*background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                url('../../../MEDIA/bg2.jpg'); */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+
+    overflow-x: hidden; 
+}
+
+
+            /*   BACKGROUND   */
+
+            .background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                z-index: -1;
+                overflow: hidden;
+            }
+            
+            .shape {
+                position: absolute;
+                filter: blur(90px);
+                opacity: 0.6;
+                animation: float 25s infinite alternate;
+                mix-blend-mode: screen; /* Для більш красивого ефекту */
+            }
+            
+            /* Існуючі фігури */
+            .shape-logo {
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(circle, #079981, #044d55);
+                top: -175px;
+                left: -50px;
+            }
+            .shape-login {
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(circle, #049aa5, #055e68);
+                top: -175px;
+                left: 1650px;
+            }
+            
+            .shape-red {
+                width: 700px;
+                height: 700px;
+                background: radial-gradient(circle, #a72302, #6d0303);
+                bottom: -400px;
+                right: -440px;
+
+                rotate: 45deg;
+             
+                animation: none;
+            }
+            .shape-purple {
+                width: 700px;
+                height: 700px;
+                background: radial-gradient(circle, #2a0468, #330446);
+                bottom: -400px;
+                right: 1550px;
+
+                rotate: 45deg;
+             
+                animation: none;
+            }
+            
+            .shape-right {
+                width: 1150px;
+                height: 1100px;
+                background: radial-gradient(circle, #22033b, #172e72);
+                top: 40%;
+                left: 80%;
+                z-index: -2;
+
+                transform: translate(-50%, -50%);
+                animation: none;
+            }
+            .shape-left {
+                width: 1150px;
+                height: 1100px;
+                background: radial-gradient(circle, #270344, #172e72);
+                top: 40%;
+                left: 20%;
+                z-index: -2;
+
+                transform: translate(-50%, -50%);
+                animation: none;
+            }
+            
+            .shape-center {
+                width: 600px;
+                height: 400px;
+                background: radial-gradient(circle, rgb(4, 97, 139), rgb(3, 86, 92));
+                top: 5%;
+                left: 33%;
+
+                animation: none;
+            }
+            .shape-bottom {
+                width: 2600px;
+                height: 400px;
+                background: radial-gradient(circle, rgb(3, 34, 209), rgb(2, 21, 65));
+                top: 85%;
+                left: -13%;
+
+                animation: none;
+            }
+            
+            /* Анімація плаваючого ефекту */
+            @keyframes float {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                }
+                100% {
+                    transform: translateY(50px) rotate(360deg);
+                }
+            }
+            
+            .content {
+                position: relative;
+                z-index: 1;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+
+    /*   BACKGROUND   */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    justify-content: center;
+}
+
+/* Статистика - Колонки */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 60px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    color: #00D9FF;
+    margin-bottom: 10px;
+}
+
+.stat p {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+    /* Основна інформація */
+
+.info {
+    text-align: center;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.info h2 {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 20px;
+    color: #B0B0B0;
+    margin-top: 20px;
+}
+
+    /* Кроки інструкцій */
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.step {
+    width: 45%;
+}
+
+.step h3 {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #00D9FF;
+    margin-bottom: 15px;
+}
+
+.step ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.step li {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #B0B0B0;
+}
+
+    /* Доступ та можливості */
+
+.access {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.access h2 {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.access-point {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.access-point img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+    /* Процедура старту */
+
+.procedure {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.procedure h2 {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #00D9FF;
+    margin-bottom: 20px;
+}
+
+.procedure p {
+    font-size: 20px;
+    color: #B0B0B0;
+}
+
+    /* Як це працює: */
+
+.how-it-works {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.screenshots img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.screenshots img:hover {
+    transform: scale(1.05);
+}
+
+    /* Розділювальні лінії */
+    hr {
+        border: none;
+        height: 5px;
+        background-image: linear-gradient(rgb(158, 77, 11), rgb(168, 57, 6));
+        margin: 30px 0;
+    }
+
+/* Стилі для кожної секції */
+section {
+    padding: 40px 0;
+}
+
+section .container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info, .steps, .access, .procedure, .how-it-works {
+    padding: 60px 0;
+    margin-left: 20px;
+}
+
+/* Підвищення висоти на останніх секціях */
+.how-it-works {
+    margin-bottom: 120px;
+}
+
+/* Гнучке розташування для останніх блоків */
+.steps, .access, .procedure, .how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+}
+
+
+        /* BODY */
+
+
+            /* FOOTER */
+/* Footer styles */
+.footer {
+    background-color: #02182956;
+    box-shadow: 0 12px 10px rgba(0, 3, 8, 0.419);
+
+    color: #fff;
+    padding: 3rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section {
+    margin-bottom: 1.5rem;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+    .footer-links {
+        list-style: none;
+        display: contents;
+    }
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+address {
+    font-style: normal;
+    color: #ccc;
+}
+    address p {
+        padding-bottom: 2px;
+    }
+
+.footer-form {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.footer-form input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.footer-form button {
+    padding: 0.5rem 1rem;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-form button:hover {
+    background-color: #3a7bc8;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    color: #ccc;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #fff;
+}
+
+.copyright {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+        /* FOOTER */
+
+
+
+    /* PC Interface */
+
+
+
+
+
+
+
+
+
+                    /* MOBILE Interface */
+                    @media (max-width: 768px) {
+
+
+                /* HEADER */
+
+                
+                    header {
+                        display: flex;
+                        flex-direction: row; 
+                        
+                        width: 100%;
+                        max-height: 150px;
+                        height: 75px;
+                    }
+
+                    .header-content {
+                        align-items: center;
+                        text-align: center;
+                      }
+                      
+                    nav {
+                        padding: 20px;
+                        border-radius: 8px;
+                    }
+                    ul {
+                        list-style-type: none;
+        
+                        padding: 0;
+                        margin: 0;
+        
+                        display: flex;
+                        gap: 30px;
+                    }
+
+                .nav-points {
+                    display: none;
+                }
+                
+                .logo {
+                    font-size: 28px;
+
+                    margin-left: 0px;
+                    margin-right: 10px;
+                }
+
+                .page-link {    
+                    font-size: 17px;
+                }
+                .page-link:hover {
+                    color: #08315e;
+                }
+                    
+                    
+    
+                           
+
+            /* HEADER */
+
+
+                /* BODY */
+                .info, .access, .procedure, .how-it-works {
+                    padding: 40px 0;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+            /* BODY */
+
+
+                /* FOOTER */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-form {
+        flex-direction: column;
+    }
+
+    .footer-form input,
+    .footer-form button {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .footer-form button {
+        margin-top: 0.5rem;
+    }
+}
+
+
+            /* FOOTER */
+
+
+
+        /* MOBILE Interface */}
