@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import axios from 'axios';
 
 const App = () => {
@@ -10,7 +14,22 @@ const App = () => {
             .catch(error => console.error(error));
     }, []);
 
-    return <div>{data ? data.message : 'Loading...'}</div>;
+    return (
+        <Router>
+            <nav>
+                <ul>
+                    <li><Link to="/">Головна</Link></li>
+                    <li><Link to="/about">Про нас</Link></li>
+                    <li><Link to="/contact">Контакти</Link></li>
+                </ul>
+            </nav>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+        </Router>
+    );
 };
 
 export default App;
