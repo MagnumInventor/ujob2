@@ -1,21 +1,33 @@
 import React from "react";
 
-const About = () => {
+const Contact = () => {
     return (
         <div>
             <header>
-                <h1>Про UJOB</h1>
+                <h1>Контакти</h1>
             </header>
             <main>
                 <section>
-                    <p>
-                        Ми допомагаємо об'єднати роботодавців та шукачів роботи. 
-                        Наша місія — створити ідеальну платформу для кар'єрного розвитку.
-                    </p>
+                    <p>Email: support@ujob.com</p>
+                    <p>Телефон: +380 99 123 45 67</p>
+                </section>
+                <section>
+                    <h2>Зв'яжіться з нами через форму</h2>
+                    <form>
+                        <label>
+                            Ваше ім'я:
+                            <input type="text" name="name" />
+                        </label>
+                        <label>
+                            Ваше повідомлення:
+                            <textarea name="message"></textarea>
+                        </label>
+                        <button type="submit">Відправити</button>
+                    </form>
                 </section>
             </main>
         </div>
     );
 };
 
-export default About;
+export default Contact;
