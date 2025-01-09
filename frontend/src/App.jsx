@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/LandingPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import axios from 'axios';
