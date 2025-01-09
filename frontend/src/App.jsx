@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/LandingPage";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import About from "./pages/AboutUs";
+import Contact from "./pages/SupportUs";
 import axios from 'axios';
 
 const App = () => {
