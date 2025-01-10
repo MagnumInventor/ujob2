@@ -24,7 +24,7 @@ const App = () => {
                 </ul>
             </nav>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home data={data} />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
@@ -32,4 +32,3 @@ const App = () => {
     );
 };
 
-export default App;
