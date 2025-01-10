@@ -5,7 +5,7 @@ const App = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:3003/api/example')
+        axios.get('http://localhost:3000/api/example')
             .then((response) => setData(response.data))
             .catch((error) => console.error(error));
     }, []);
