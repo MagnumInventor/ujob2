@@ -12,4 +12,9 @@ const Card = ({ title, children, className = '' }) => {
   );
 };
 
+const CardContent = ({ children }) => {
+  return <div className="p-4">{children}</div>;
+};
+
 export default Card;
+export { CardContent };

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from '../ui/card'
 import { Users, Rocket } from 'lucide-react'
 import styles from '../../styles/home/ServiceImpact.module.css'
 

@@ -15,7 +15,6 @@ import FutureProspects from './components/landing/FutureProspects'
 import DonationAppeal from './components/landing/DonationAppeal'
 import AdditionalInfo from './components/landing/AdditionalInfo'
 
-
 const App = () => {
     const [data, setData] = useState(null);
 
