@@ -1,3 +1,4 @@
+/*
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,3 +57,4 @@ body {
 .paragraph {
   @apply text-gray-300 leading-relaxed mb-4;
 }
+*/
