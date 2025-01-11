@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '../ui/button'
 import styles from '../../styles/home/GetStarted.module.css'
 
 export default function GetStarted() {
