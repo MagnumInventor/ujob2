@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import styles from './Header.module.css'
+import styles from '../../styles/common/Header.module.css'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)

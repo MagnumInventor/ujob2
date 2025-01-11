@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Users, Rocket } from 'lucide-react'
-import styles from './ServiceImpact.module.css'
+import styles from '../../styles/home/ServiceImpact.module.css'
 
 const AnimatedNumber = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0)

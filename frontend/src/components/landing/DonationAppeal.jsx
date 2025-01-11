@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import styles from './DonationAppeal.module.css'
+import styles from '../../styles/home/DonationAppeal.module.css'
 
 export default function DonationAppeal() {
   return (

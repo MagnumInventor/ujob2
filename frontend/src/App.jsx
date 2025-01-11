@@ -5,14 +5,16 @@ import About from "./pages/AboutUs";
 import Contact from "./pages/SupportUs";
 import axios from 'axios';
 
-import Header from './components/Header'
-import Hero from './components/Hero'
+import Header from './components/common/Header'
+import Footer from './components/common/Footer'
+
+import Hero from './components/landing/Hero'
 import ServiceImpact from './components/landing/ServiceImpact'
 import GetStarted from './components/landing/GetStarted'
 import FutureProspects from './components/landing/FutureProspects'
 import DonationAppeal from './components/landing/DonationAppeal'
 import AdditionalInfo from './components/landing/AdditionalInfo'
-import Footer from './components/landing/Footer'
+
 
 const App = () => {
     const [data, setData] = useState(null);

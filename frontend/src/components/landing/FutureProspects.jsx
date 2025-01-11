@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import styles from './FutureProspects.module.css'
+import styles from '../../styles/home/FutureProspects.module.css'
 
 const features = [
   { title: 'Comprehensive user dashboards', description: 'Manage your profile, applications, and job postings all in one place.' },
