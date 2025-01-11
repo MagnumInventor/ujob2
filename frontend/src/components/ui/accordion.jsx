@@ -1,37 +1,34 @@
 // components/ui/Accordion.jsx
 import React, { useState } from 'react';
 
-const AccordionItem = ({ title, children, isOpen, onToggle }) => {
+const Accordion = ({ children, className = '' }) => {
+  return <div className={`accordion ${className}`}>{children}</div>;
+};
+
+const AccordionItem = ({ children, className = '' }) => {
+  return <div className={`accordion-item ${className}`}>{children}</div>;
+};
+
+const AccordionTrigger = ({ children, className = '', onClick }) => {
   return (
-    <div className="border-b">
-      <button
-        onClick={onToggle}
-        className="w-full text-left py-3 px-4 bg-gray-200 hover:bg-gray-300 focus:outline-none"
-      >
-        <h3 className="font-semibold text-gray-800">{title}</h3>
-      </button>
-      {isOpen && <div className="p-4">{children}</div>}
+    <button
+      className={`accordion-trigger p-4 bg-gray-200 text-left w-full rounded-t-lg hover:bg-gray-300 focus:outline-none ${className}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};
+
+const AccordionContent = ({ children, className = '', isOpen }) => {
+  return (
+    <div
+      className={`accordion-content p-4 bg-gray-100 ${isOpen ? 'block' : 'hidden'} ${className}`}
+    >
+      {children}
     </div>
   );
 };
 
-const Accordion = ({ children }) => {
-  const [openIndex, setOpenIndex] = useState(null);
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 
-  const handleToggle = index => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  return (
-    <div className="bg-white shadow-md rounded-md">
-      {React.Children.map(children, (child, index) => 
-        React.cloneElement(child, {
-          isOpen: openIndex === index,
-          onToggle: () => handleToggle(index),
-        })
-      )}
-    </div>
-  );
-};
-
-export { Accordion, AccordionItem };

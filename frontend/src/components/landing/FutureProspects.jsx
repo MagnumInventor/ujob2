@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
 import styles from '../../styles/home/FutureProspects.module.css'
 
 const features = [
