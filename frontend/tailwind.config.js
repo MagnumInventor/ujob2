@@ -2,6 +2,8 @@
 module.exports = {
   content: [
     "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./frontend/src/**/*.{html,js,jsx,ts,tsx}",
+
     "./frontend/src/pages/*.{html,js,jsx}",
     "./frontend/src/components/landing/*.{html,js,jsx}",
     "./frontend/src/App.jsx",

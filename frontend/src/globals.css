@@ -20,9 +20,18 @@ body {
   min-height: 100vh;
 }
 
-@layer base {
-  body {
-    @apply text-foreground bg-background;
+@layer utilities {
+  .text-foreground {
+    color: rgb(var(--foreground));
+  }
+  .bg-background {
+    background: linear-gradient(135deg, 
+      rgb(var(--background-start)),
+      rgb(24, 39, 55),
+      rgb(39, 82, 125),
+      rgb(67, 102, 139),
+      rgb(var(--background-end))
+    );
   }
 }
 
@@ -47,4 +56,3 @@ body {
 .paragraph {
   @apply text-gray-300 leading-relaxed mb-4;
 }
-
