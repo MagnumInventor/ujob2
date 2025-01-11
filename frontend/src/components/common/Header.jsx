@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from '../ui/button'
-import Link from 'next/link'
+import { Link } from 'react-router-dom';
 import styles from '../../styles/common/Header.module.css'
 
 export default function Header() {
