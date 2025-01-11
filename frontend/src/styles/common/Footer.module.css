@@ -1,0 +1,48 @@
+.footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  color: white;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.socialLinks a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.contact, .legal {
+  text-align: center;
+}
+
+.legal a {
+  color: white;
+  opacity: 0.7;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.legal a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+

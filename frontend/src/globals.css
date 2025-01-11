@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-start: 14 6 20;
+  --background-end: 66 102 139;
+  --foreground: 210 40% 98%;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: linear-gradient(135deg, 
+    rgb(var(--background-start)),
+    rgb(24, 39, 55),
+    rgb(39, 82, 125),
+    rgb(67, 102, 139),
+    rgb(var(--background-end))
+  );
+  min-height: 100vh;
+}
+
+@layer base {
+  body {
+    @apply text-foreground bg-background;
+  }
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600;
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.volumetric {
+  @apply relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 p-1;
+}
+
+.volumetric::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-30 blur-xl;
+  z-index: -1;
+}
+
+.paragraph {
+  @apply text-gray-300 leading-relaxed mb-4;
+}
+
