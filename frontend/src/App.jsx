@@ -15,6 +15,8 @@ import FutureProspects from './components/landing/FutureProspects'
 import DonationAppeal from './components/landing/DonationAppeal'
 import AdditionalInfo from './components/landing/AdditionalInfo'
 
+import { MyProvider } from '../src/context/MyContext';  // Імпортуємо провайдер
+
 const App = () => {
     const [data, setData] = useState(null);
 

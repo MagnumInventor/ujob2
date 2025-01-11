@@ -13,7 +13,7 @@ const features = [
 ]
 
 export default function FutureProspects() {
-  const [openItem, setOpenItem] = useState<string | null>(null)
+  const [openItem, setOpenItem] = useState(null)
 
   return (
     <section className={styles.prospects}>
