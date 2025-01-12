@@ -10,24 +10,32 @@ import FutureProspects from './components/landing/FutureProspects';
 import DonationAppeal from './components/landing/DonationAppeal';
 import AdditionalInfo from './components/landing/AdditionalInfo';
 
-function Home() {
+function SafeComponent(Component) {
+  try {
+    return React.createElement(Component, null);
+  } catch (error) {
+    console.error(`Error in component: ${Component.name}`, error);
+    return React.createElement('div', null, `Error in ${Component.name}`);
+  }
+}
+
+function App() {
   return React.createElement(
     'div',
     { className: 'min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white' },
-    React.createElement(Header, null),
-    React.createElement(
-      'main',
-      null,
-      React.createElement(Hero, null),
-      React.createElement(ServiceImpact, null),
-      React.createElement(GetStarted, null),
-      React.createElement(FutureProspects, null),
-      React.createElement(DonationAppeal, null),
-      React.createElement(AdditionalInfo, null)
+    SafeComponent(Header),
+    React.createElement('main', null,
+      SafeComponent(Hero),
+      SafeComponent(ServiceImpact),
+      SafeComponent(GetStarted),
+      SafeComponent(FutureProspects),
+      SafeComponent(DonationAppeal),
+      SafeComponent(AdditionalInfo)
     ),
-    React.createElement(Footer, null)
+    SafeComponent(Footer)
   );
 }
 
-export default Home;
+export default App;
+
 
