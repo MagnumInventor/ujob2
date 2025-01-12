@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and FUCK to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+
+import Hero from './components/landing/Hero';
+import ServiceImpact from './components/landing/ServiceImpact';
+import GetStarted from './components/landing/GetStarted';
+import FutureProspects from './components/landing/FutureProspects';
+import DonationAppeal from './components/landing/DonationAppeal';
+import AdditionalInfo from './components/landing/AdditionalInfo';
+
+function Home() {
+  return React.createElement(
+    'div',
+    { className: 'min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white' },
+    React.createElement(Header, null),
+    React.createElement(
+      'main',
+      null,
+      React.createElement(Hero, null),
+      React.createElement(ServiceImpact, null),
+      React.createElement(GetStarted, null),
+      React.createElement(FutureProspects, null),
+      React.createElement(DonationAppeal, null),
+      React.createElement(AdditionalInfo, null)
+    ),
+    React.createElement(Footer, null)
   );
 }
 
-export default App;
+export default Home;
+
