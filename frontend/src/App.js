@@ -22,7 +22,7 @@ function SafeComponent(Component) {
 function App() {
   return React.createElement(
     'div',
-    { className: 'min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white' },
+    { className: 'min-h-screen' },
     SafeComponent(Header),
     React.createElement('main', null,
       SafeComponent(Hero),
