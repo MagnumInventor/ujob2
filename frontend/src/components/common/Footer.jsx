@@ -12,13 +12,13 @@ export default function Footer() {
           <a href="#" aria-label="LinkedIn"><Linkedin /></a>
         </div>
         <div className={styles.contact}>
-          <p>Contact: info@ujob.com</p>
-          <p>Phone: +1 (123) 456-7890</p>
+          <p>Email: ujobua@gmail.com</p>
+          <p>Гаряча лінія: +(38) 096-042-7745</p>
         </div>
         <div className={styles.legal}>
-          <p>© 2025 Ujob - All Rights Reserved</p>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <p>© 2025 Ujob - Всі права захищені</p>
+          <a href="#">Політика конфіденційності</a>
+          <a href="#">Умови використання</a>
         </div>
       </div>
     </footer>

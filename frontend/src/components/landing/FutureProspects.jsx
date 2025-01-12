@@ -16,7 +16,7 @@ export default function FutureProspects() {
 
   return (
     <section className={styles.prospects}>
-      <h2 className={`${styles.title} text-gradient`}>Features in Development</h2>
+      <h2 className={`${styles.title} text-gradient`}>Функції в розробці:</h2>
       <div className={`${styles.accordionWrapper} volumetric`}>
         <div className={styles.accordion}>
           {features.map((feature, index) => (

@@ -29,13 +29,19 @@ export default function ServiceImpact() {
       <div className={`${styles.card} volumetric`}>
         <Users className={styles.icon} />
         <p>
-          <AnimatedNumber end={264} /> students found their first job via Ujob.
+          <AnimatedNumber end={264} /> студентів знайшли свою першу роботу через Ujob.
         </p>
       </div>
       <div className={`${styles.card} volumetric`}>
         <Rocket className={styles.icon} />
         <p>
-          <AnimatedNumber end={21} /> startups hired talent through Ujob.
+          <AnimatedNumber end={21} /> Компаній співпрацють з Ujob.
+        </p>
+      </div>
+      <div className={`${styles.card} volumetric`}>
+        <Rocket className={styles.icon} />
+        <p>
+          <AnimatedNumber end={3} /> Стартапи почали фінкціонувати завдяки Ujob.
         </p>
       </div>
     </section>
