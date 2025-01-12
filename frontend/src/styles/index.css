@@ -1,0 +1,53 @@
+/* src/styles/index.css */
+
+/* Hero Section */
+.hero {
+    background-color: #1e3a8a; /* bg-blue-800 */
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero button {
+    padding: 1rem 2rem;
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s;
+  }
+  
+  .hero button:hover {
+    background-color: #3b82f6; /* hover:bg-blue-500 */
+  }
+  
+  /* Service Impact Section */
+  .service-impact {
+    background-color: #1e40af; /* bg-blue-900 */
+    color: white;
+    padding: 4rem 1rem;
+  }
+  
+  .service-impact h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .service-impact p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
