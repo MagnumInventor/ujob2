@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
-import styles from '../../styles/home/FutureProspects.module.css'
+import styles from './FutureProspectsMod.css'
 
 const features = [
   { title: 'Comprehensive user dashboards', description: 'Manage your profile, applications, and job postings all in one place.' },
@@ -13,24 +12,32 @@ const features = [
 ]
 
 export default function FutureProspects() {
-  const [openItem, setOpenItem] = useState(null)
+  const [openItem, setOpenItem] = useState<string | null>(null)
 
   return (
     <section className={styles.prospects}>
-      <h2 className="text-3xl font-bold mb-8 text-gradient">Features in Development</h2>
+      <h2 className={`${styles.title} text-gradient`}>Features in Development</h2>
       <div className={`${styles.accordionWrapper} volumetric`}>
-        <Accordion type="single" collapsible className={styles.accordion}>
+        <div className={styles.accordion}>
           {features.map((feature, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger onClick={() => setOpenItem(`item-${index}`)}>
+            <div key={index} className={styles.accordionItem}>
+              <button
+                className={styles.accordionTrigger}
+                onClick={() => setOpenItem(openItem === `item-${index}` ? null : `item-${index}`)}
+              >
                 {feature.title}
-              </AccordionTrigger>
-              <AccordionContent>{feature.description}</AccordionContent>
-            </AccordionItem>
+              </button>
+              {openItem === `item-${index}` && (
+                <div className={styles.accordionContent}>
+                  {feature.description}
+                </div>
+              )}
+            </div>
           ))}
-        </Accordion>
+        </div>
       </div>
     </section>
   )
 }
+
 

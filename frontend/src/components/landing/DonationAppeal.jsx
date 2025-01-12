@@ -1,15 +1,13 @@
-import { Button } from '../ui/button'
-import styles from '../../styles/home/DonationAppeal.module.css'
+import styles from './DonationAppealMod.css'
 
 export default function DonationAppeal() {
   return (
     <section className={styles.donation}>
       <div className={`${styles.content} volumetric`}>
-        <h2 className="text-3xl font-bold mb-4 text-gradient">Support Our Mission</h2>
+        <h2 className={`${styles.title} text-gradient`}>Support Our Mission</h2>
         <p className="paragraph">Help us connect more talent with opportunities and empower the next generation of innovators.</p>
-        <Button className={styles.donateButton}>Donate Now</Button>
+        <a href="#" className="btn btn-primary">Donate Now</a>
       </div>
     </section>
   )
 }
-

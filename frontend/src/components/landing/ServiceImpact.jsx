@@ -1,17 +1,44 @@
-// src/components/landing/ServiceImpact.jsx
-import React from 'react';
+'use client'
 
-function ServiceImpact() {
+import { useState, useEffect } from 'react'
+import { Users, Rocket } from 'lucide-react'
+import styles from './ServiceImpactMod.css'
+
+const AnimatedNumber = ({ end, duration = 2000 }) => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    let startTime
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp
+      const progress = Math.min((timestamp - startTime) / duration, 1)
+      setCount(Math.floor(progress * end))
+      if (progress < 1) {
+        window.requestAnimationFrame(step)
+      }
+    }
+    window.requestAnimationFrame(step)
+  }, [end, duration])
+
+  return <span>{count}</span>
+}
+
+export default function ServiceImpact() {
   return (
-    <section className="service-impact bg-blue-900 text-white py-16">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-        <p className="text-xl">
-          We have helped thousands of people get started with their careers, connect with top talent, and grow their businesses.
+    <section className={styles.impact}>
+      <div className={`${styles.card} volumetric`}>
+        <Users className={styles.icon} />
+        <p>
+          <AnimatedNumber end={264} /> students found their first job via Ujob.
+        </p>
+      </div>
+      <div className={`${styles.card} volumetric`}>
+        <Rocket className={styles.icon} />
+        <p>
+          <AnimatedNumber end={21} /> startups hired talent through Ujob.
         </p>
       </div>
     </section>
-  );
+  )
 }
 
-export default ServiceImpact;

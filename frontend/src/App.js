@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Hero from './components/landing/Hero';
-import ServiceImpact from './components/landing/ServiceImpact';
+import GetStarted from './components/landing/GetStarted';
 
 function SafeComponent(Component) {
   try {
@@ -17,7 +17,7 @@ function App() {
     'div',
     { className: 'min-h-screen' },
     SafeComponent(Hero),
-    SafeComponent(ServiceImpact)
+    SafeComponent(GetStarted)
   );
 }
 

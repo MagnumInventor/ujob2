@@ -26,23 +26,6 @@
   animation: fadeIn 1s ease-out 0.5s both;
 }
 
-.cta {
-  font-size: 1.2rem;
-  padding: 0.75rem 2rem;
-  background: linear-gradient(135deg, #ff6b00, #ff8c00);
-  border: none;
-  border-radius: 50px;
-  color: white;
-  font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 1s ease-out 1s both;
-}
-
-.cta:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
-}
-
 .decoration {
   position: absolute;
   top: 0;
