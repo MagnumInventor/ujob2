@@ -1,3 +1,24 @@
+/* global.css */
+
+/* Фон з градієнтом для загального фону */
+.background-gradient {
+  background: linear-gradient(135deg, #0e0614, #182737, #27527d, #43668b, #7297bd);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Анімація зміни градієнту */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 :root {
   --background-start: rgb(14, 6, 20);

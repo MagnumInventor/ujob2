@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Users, Rocket } from 'lucide-react'
-import styles from './ServiceImpactMod.css'
+import styles from './ServiceImpactMod.module.css'
 
 const AnimatedNumber = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0)

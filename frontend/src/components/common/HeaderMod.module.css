@@ -21,6 +21,10 @@
   font-weight: bold;
 }
 
+.logoText {
+  font-size: 2rem;
+}
+
 .nav {
   display: flex;
   gap: 2rem;
@@ -34,20 +38,5 @@
 
 .nav a:hover {
   color: #7297bd;
-}
-
-.cta {
-  background-color: #ff6b00;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-weight: bold;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 107, 0, 0.5);
 }
 

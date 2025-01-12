@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import styles from './FutureProspectsMod.css'
+import styles from './FutureProspectsMod.module.css'
 
 const features = [
   { title: 'Comprehensive user dashboards', description: 'Manage your profile, applications, and job postings all in one place.' },
@@ -12,7 +12,7 @@ const features = [
 ]
 
 export default function FutureProspects() {
-  const [openItem, setOpenItem] = useState<string | null>(null)
+  const [openItem, setOpenItem] = useState(null);
 
   return (
     <section className={styles.prospects}>

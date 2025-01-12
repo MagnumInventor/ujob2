@@ -1,9 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Button } from '../ui/button'
-import { Link } from 'react-router-dom';
-import styles from '../../styles/common/Header.module.css'
+// import Link from 'next/link'
+import styles from './HeaderMod.module.css'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -19,14 +18,9 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.logo}>
-        <span className="text-3xl font-bold glow">Ujob</span>
+        <span className={`${styles.logoText} glow`}>Ujob</span>
       </div>
-      <nav className={styles.nav}>
-        <Link href="#about">About</Link>
-        <Link href="#services">Services</Link>
-        <Link href="#contact">Contact</Link>
-      </nav>
-      <Button className={styles.cta}>Get Started</Button>
+      <a href="#" className="btn btn-primary">Get Started</a>
     </header>
   )
 }

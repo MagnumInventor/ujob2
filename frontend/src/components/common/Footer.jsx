@@ -1,5 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
-import styles from '../../styles/common/Footer.module.css'
+import styles from './FooterMod.module.css'
 
 export default function Footer() {
   return (
@@ -24,4 +24,6 @@ export default function Footer() {
     </footer>
   )
 }
+
+
 

@@ -1,4 +1,4 @@
-import styles from './DonationAppealMod.css'
+import styles from './DonationAppealMod.module.css'
 
 export default function DonationAppeal() {
   return (
