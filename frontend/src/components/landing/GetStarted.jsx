@@ -1,4 +1,4 @@
-import styles from './GetStartedMod.module.css'
+import styles from '../../styles/home/GetStartedMod.module.css'
 
 export default function GetStarted() {
   return (
