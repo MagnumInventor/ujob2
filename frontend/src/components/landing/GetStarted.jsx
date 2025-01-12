@@ -1,5 +1,5 @@
 import { Button } from '../ui/button'
-import styles from '../../styles/home/GetStarted.module.css'
+import styles from './GetStarted.css'
 
 export default function GetStarted() {
   return (

@@ -1,3 +1,98 @@
+
+:root {
+  --background-start: rgb(14, 6, 20);
+  --background-end: rgb(66, 102, 139);
+  --foreground: rgb(229, 236, 246);
+  --primary: #ff6b00;
+  --primary-hover: #ff8c00;
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(135deg, 
+    var(--background-start),
+    rgb(24, 39, 55),
+    rgb(39, 82, 125),
+    rgb(67, 102, 139),
+    var(--background-end)
+  );
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.volumetric {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: linear-gradient(to bottom right, #1a202c, #2d3748);
+  padding: 1rem;
+}
+
+.volumetric::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #3182ce, #805ad5);
+  opacity: 0.3;
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.paragraph {
+  color: #a0aec0;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(255, 107, 0, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
 /*
 @tailwind base;
 @tailwind components;
