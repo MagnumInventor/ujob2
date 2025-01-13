@@ -34,7 +34,7 @@ export default function Header() {
         <a href="#services">Services</a>
       </nav>
       <div className={styles.actions}>
-        <a href="#" className="btn btn-primary">Почати</a>
+        <a src="frontend\src\components\auth\Registration.jsx" className="btn btn-primary">Почати</a>
         <button className={styles.menuToggle} onClick={toggleMenu}>
           <span></span>
           <span></span>
