@@ -1,5 +1,8 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './styles/globals.css'; 
+
+import Enter from './pages/сommon/Enter';
 
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';

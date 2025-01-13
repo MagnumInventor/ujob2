@@ -1,20 +1,42 @@
-import React from "react";
+import React from 'react';
+import './styles/globals.css'; 
 
-const Home = () => {
-    return (
-        <div>
-            <header>
-                <h1>Ласкаво просимо до UJOB</h1>
-                <p>Платформа для пошуку роботи та пошуку талантів.</p>
-            </header>
-            <main>
-                <section>
-                    <h2>Можливості для всіх</h2>
-                    <p>Знайдіть роботу або наймайте професіоналів прямо зараз!</p>
-                </section>
-            </main>
-        </div>
-    );
-};
+import Registration from './frontend/page/auth/Registration';
 
-export default Home;
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+
+import Hero from './components/landing/Hero';
+import ServiceImpact from './components/landing/ServiceImpact';
+import GetStarted from './components/landing/GetStarted';
+import FutureProspects from './components/landing/FutureProspects';
+import DonationAppeal from './components/landing/DonationAppeal';
+import AdditionalInfo from './components/landing/AdditionalInfo';
+
+function SafeComponent(Component) {
+  try {
+    return React.createElement(Component, null);
+  } catch (error) {
+    console.error(`Error in component: ${Component.name}`, error);
+    return React.createElement('div', null, `Error in ${Component.name}`);
+  }
+}
+
+function App() {
+  return React.createElement(
+    'div',
+    { className: 'min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white' },
+    SafeComponent(Header),
+    React.createElement('main', null,
+      SafeComponent(Hero),
+      SafeComponent(ServiceImpact),
+      SafeComponent(GetStarted),
+      SafeComponent(FutureProspects),
+      SafeComponent(DonationAppeal),
+      SafeComponent(AdditionalInfo)
+    ),
+    SafeComponent(Footer)
+  );
+}
+
+export default App;

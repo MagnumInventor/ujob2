@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles/globals.css'; 
+import '../../styles/globals.css'; 
 
-import Header from './components/common/Header';
-import Footer from './components/common/Footer';
+import Header from '../../components/common/Header';
+import Footer from '../../components/common/Footer';
 
-import Enter from './components/auth/Registration';
+import Enter from '../../components/auth/Registration';
 
 function SafeComponent(Component) {
   try {
