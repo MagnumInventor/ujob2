@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 // import Link from 'next/link'
-import styles from './HeaderMod.module.css'
+import styles from '../../styles/common/HeaderMod.module.css'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -20,7 +20,7 @@ export default function Header() {
       <div className={styles.logo}>
         <span className={`${styles.logoText} glow`}>Ujob</span>
       </div>
-      <a href="#" className="btn btn-primary">Get Started</a>
+      <a href="#" className="btn btn-primary">Почати</a>
     </header>
   )
 }
