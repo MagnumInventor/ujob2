@@ -175,3 +175,26 @@ body {
   @apply text-gray-300 leading-relaxed mb-4;
 }
 */
+
+.glow {
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #00aaff, 0 0 30px #00aaff;
+}
+
+.btn-primary {
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav a {
+  transition: color 0.2s ease-in-out;
+}
+
+.menu-toggle span {
+  transition: transform 0.2s ease;
+}
+
+.menu-toggle:hover span {
+  transform: scaleX(1.2);
+}

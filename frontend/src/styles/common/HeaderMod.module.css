@@ -1,30 +1,36 @@
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s ease;
-
-  box-shadow: #000;
-  background-color: rgba(25, 14, 34, 0.2);
+  background: rgba(0, 0, 0, 0.8);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scrolled {
-  background-color: rgba(25, 14, 34, 0.9);
+  background-color: rgba(14, 6, 20, 0.9);
   backdrop-filter: blur(5px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  text-shadow: #ffffff;
+  text-transform: uppercase;
 }
 
+.logoText {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-left: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
 
 @keyframes blink {
   0% {
@@ -38,125 +44,83 @@
   }
 }
 
-.logoText {
-  color: #ffffff; 
-  font-weight: bold; /* Напівжирний шрифт */
-  animation: blink 1s infinite; /* Анімація з мерехтінням */
-}
-
-
-
-.logoText {
-  font-size: 3rem;
-  margin-left: 5px;
-  margin-top: 15px;
-}
-
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav a {
-  color: white;
+  color: var(--foreground);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
 .nav a:hover {
   color: #7297bd;
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
 
-    /* 13.01 */
-    
+.menuToggle span {
+  width: 2rem;
+  height: 0.25rem;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
 
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(14, 6, 20, 0.95);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
 
-    .scrolled {
-      background-color: rgba(14, 6, 20, 0.9);
-      backdrop-filter: blur(5px);
-    }
-    
-    .nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-    
-    .nav a {
-      color: white;
-      font-size: large;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .nav a:hover {
-      color: #7297bd;
-    }
-    
-    .actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .menuToggle {
-      display: none;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 2rem;
-      height: 2rem;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      z-index: 10;
-    }
-    
-    .menuToggle span {
-      width: 2rem;
-      height: 0.25rem;
-      background: white;
-      border-radius: 10px;
-      transition: all 0.3s linear;
-      position: relative;
-      transform-origin: 1px;
-    }
-    
-    @media (max-width: 768px) {
-      .nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 100%;
-        background: rgba(14, 6, 20, 0.95);
-        transition: transform 0.3s ease-in-out;
-        transform: translateX(100%);
-      }
-    
-      .nav.open {
-        transform: translateX(0);
-      }
-    
-      .menuToggle {
-        display: flex;
-      }
-    
-      .open span:first-child {
-        transform: rotate(45deg);
-      }
-    
-      .open span:nth-child(2) {
-        opacity: 0;
-      }
-    
-      .open span:nth-child(3) {
-        transform: rotate(-45deg);
-      }
-    }
-    
-    
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+
+  .menuToggle.open span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .menuToggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuToggle.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}

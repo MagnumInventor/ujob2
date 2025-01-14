@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './styles/globals.css'; 
+import './styles/commom/LoadingScreen.css'; 
 
-import Landing from './pages/Landing';
+import Landing from './pages/сommon/LandingPage';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ function App() {
       <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white flex items-center justify-center">
         {loading ? (
           <div className="loading-screen">
-            <p className="animated-text">ujob loading</p>
+            <p className="animated-text">Ujob loading</p>
           </div>
         ) : (
           <Routes>
