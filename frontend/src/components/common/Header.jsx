@@ -1,10 +1,9 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-// import Link from 'next/link'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import styles from '../../styles/common/HeaderMod.module.css'
-import Enter from '../../pages/сommon/Enter';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -25,18 +24,18 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.logo}>
-        <span className={`${styles.logoText} glow`}>Ujob</span>
+        <Link to="/" className={`${styles.logoText} glow`}>Ujob</Link>
       </div>
       <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
-        <Link href="#about">About</Link>
-        <Link href="#contact">Contact</Link>
-        <Link href="#faqs">FAQ's</Link>
-        <Link href="#support-us">Support Us</Link>
-        <Link href="#pricing">Pricing</Link>
-        <Link href="#services">Services</Link>
+        <Link to="/about">About</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/faqs">FAQ's</Link>
+        <Link to="/support-us">Support Us</Link>
+        <Link to="/pricing">Pricing</Link>
       </nav>
       <div className={styles.actions}>
-      <Link to="/Enter" className="btn btn-primary">Почати</Link>
+        <Link to="/get-started" className="btn btn-primary">Get Started</Link>
         <button className={styles.menuToggle} onClick={toggleMenu}>
           <span></span>
           <span></span>
@@ -46,4 +45,6 @@ export default function Header() {
     </header>
   )
 }
+
+
 

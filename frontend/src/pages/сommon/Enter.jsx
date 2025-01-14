@@ -1,30 +1,30 @@
 import React from 'react';
-import '../../styles/globals.css'; 
+import '../../styles/globals.css';
 
 import Header from '../../components/common/Header';
 import Footer from '../../components/common/Footer';
+import Form from '../../components/auth/Registration';
 
-import Enter from '../../components/auth/Registration';
-
-function SafeComponent(Component) {
+function SafeComponent({ Component }) {
   try {
-    return React.createElement(Component, null);
+    return <Component />;
   } catch (error) {
     console.error(`Error in component: ${Component.name}`, error);
-    return React.createElement('div', null, `Error in ${Component.name}`);
+    return <div>Error in {Component.name}</div>;
   }
 }
 
-function App() {
-  return React.createElement(
-    'div',
-    { className: 'min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white' },
-    SafeComponent(Header),
-    React.createElement('main', null,
-      SafeComponent(Enter)
-    ),
-    SafeComponent(Footer)
+function Ent() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white">
+      <SafeComponent Component={Header} />
+      <main>
+        <SafeComponent Component={Form} />
+      </main>
+      <SafeComponent Component={Footer} />
+    </div>
   );
 }
 
-export default App;
+export default Ent;
+

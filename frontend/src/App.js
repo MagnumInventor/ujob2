@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Import Routes and Route
+import { router } from './routes/routes';
 import './styles/globals.css'; 
-import './styles/commom/LoadingScreen.css'; 
-
-import Landing from './pages/сommon/LandingPage';
+import './styles/common/LoadingScreen.css'; 
 
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // Імітуємо завантаження
+  // Simulate loading
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2000); // 2 секунди
+    const timer = setTimeout(() => setLoading(false), 2000); // 2 seconds
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,8 +22,10 @@ function App() {
           </div>
         ) : (
           <Routes>
-            <Route path="/" element={<Navigate to="/landing" replace />} />
-            <Route path="/landing" element={<Landing />} />
+            {/* Replace the RouterProvider with Routes and Route */}
+            {router.map((route, index) => (
+              <Route key={index} path={route.path} element={route.element} />
+            ))}
           </Routes>
         )}
       </div>
@@ -33,3 +34,4 @@ function App() {
 }
 
 export default App;
+
