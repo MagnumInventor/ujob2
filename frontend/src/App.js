@@ -1,47 +1,34 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './styles/globals.css'; 
 
-import Enter from './pages/сommon/Enter';
-
-import Header from './components/common/Header';
-import Footer from './components/common/Footer';
-
-import Hero from './components/landing/Hero';
-import ServiceImpact from './components/landing/ServiceImpact';
-import GetStarted from './components/landing/GetStarted';
-import FutureProspects from './components/landing/FutureProspects';
-import DonationAppeal from './components/landing/DonationAppeal';
-import AdditionalInfo from './components/landing/AdditionalInfo';
-
-function SafeComponent(Component) {
-  try {
-    return React.createElement(Component, null);
-  } catch (error) {
-    console.error(`Error in component: ${Component.name}`, error);
-    return React.createElement('div', null, `Error in ${Component.name}`);
-  }
-}
+import Landing from './pages/Landing';
 
 function App() {
-  return React.createElement(
-    'div',
-    { className: 'min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white' },
-    SafeComponent(Header),
-    React.createElement('main', null,
-      SafeComponent(Hero),
-      SafeComponent(ServiceImpact),
-      SafeComponent(GetStarted),
-      SafeComponent(FutureProspects),
-      SafeComponent(DonationAppeal),
-      SafeComponent(AdditionalInfo)
-    ),
-    SafeComponent(Footer)
+  const [loading, setLoading] = useState(true);
+
+  // Імітуємо завантаження
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000); // 2 секунди
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Router>
+      <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white flex items-center justify-center">
+        {loading ? (
+          <div className="loading-screen">
+            <p className="animated-text">ujob loading</p>
+          </div>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Navigate to="/landing" replace />} />
+            <Route path="/landing" element={<Landing />} />
+          </Routes>
+        )}
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
-
-
-
