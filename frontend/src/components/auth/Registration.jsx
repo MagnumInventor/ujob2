@@ -1,120 +1,170 @@
-import React from 'react';
-import style from '../../styles/common/Form.module.css';
+'use client';
 
-const Form = () => {
-  const regions = [
-    "Вінницька область", "Волинська область", "Дніпропетровська область",
-    "Донецька область", "Житомирська область", "Закарпатська область",
-    "Запорізька область", "Івано-Франківська область", "Київська область",
-    "Кіровоградська область", "Луганська область", "Львівська область",
-    "Миколаївська область", "Одеська область", "Полтавська область",
-    "Рівненська область", "Сумська область", "Тернопільська область",
-    "Харківська область", "Херсонська область", "Хмельницька область",
-    "Черкаська область", "Чернівецька область", "Чернігівська область",
-    "м. Київ"
-  ];
+import React, { useState } from 'react';
+import styles from '../../styles/common/Form.module.css';
 
-  return (
-    <div className={style.wrapper}>
-      <section className={style.container}>
-        <header className={style.header}>Форма реєстрації</header>
-        <form className={style.form} action="#">
-          <div className={style.inputBox}>
-            <label>Повне ім'я</label>
-            <input required placeholder="Введіть повне ім'я" type="text" />
-          </div>
-          <div className={style.column}>
-            <div className={style.inputBox}>
-              <label>Номер телефону</label>
-              <input required placeholder="Введіть номер телефону" type="telephone" />
-            </div>
-            <div className={style.inputBox}>
-              <label>Дата народження</label>
-              <input required placeholder="Введіть дату народження" type="date" />
-            </div>
-          </div>
-          <div className={style.genderBox}>
-            <label>Стать</label>
-            <div className={style.genderOption}>
-              <div className={style.gender}>
-                <input defaultChecked name="gender" id="check-male" type="radio" />
-                <label htmlFor="check-male">Чоловік</label>
-              </div>
-              <div className={style.gender}>
-                <input name="gender" id="check-female" type="radio" />
-                <label htmlFor="check-female">Жінка</label>
-              </div>
-              <div className={style.gender}>
-                <input name="gender" id="check-other" type="radio" />
-                <label htmlFor="check-other">Не вказувати</label>
-              </div>
-            </div>
-          </div>
-          <div className={style.inputBox}>
-            <label>Адреса</label>
-            <input required placeholder="Введіть адресу" type="text" />
-            <div className={style.column}>
-              <div className={style.selectBox}>
-                <select required>
-                  <option hidden>Область</option>
-                  {regions.map((region, index) => (
-                    <option key={index}>{region}</option>
-                  ))}
-                </select>
-              </div>
-              <input required placeholder="Введіть місто" type="text" />
-            </div>
-          </div>
-          <button className={style.button}>Зареєструватися</button>
-        </form>
-
-        {/* Форма для роботодавців */}
-        <header className={style.header}>Реєстрація роботодавця</header>
-        <form className={style.form} action="#">
-          <div className={style.inputBox}>
-            <label>Назва компанії</label>
-            <input required placeholder="Введіть назву компанії" type="text" />
-          </div>
-          <div className={style.inputBox}>
-            <label>Тип організації</label>
-            <div className={style.selectBox}>
-              <select required>
-                <option hidden>Оберіть тип</option>
-                <option>Компанія</option>
-                <option>ФОП</option>
-                <option>Громадська організація</option>
-                <option>Інше</option>
-              </select>
-            </div>
-          </div>
-          <div className={style.inputBox}>
-            <label>Контактна особа</label>
-            <input required placeholder="Введіть ім'я контактної особи" type="text" />
-          </div>
-          <div className={style.inputBox}>
-            <label>Номер телефону</label>
-            <input required placeholder="Введіть номер телефону" type="telephone" />
-          </div>
-          <div className={style.inputBox}>
-            <label>Адреса</label>
-            <div className={style.column}>
-              <div className={style.selectBox}>
-                <select required>
-                  <option hidden>Область</option>
-                  {regions.map((region, index) => (
-                    <option key={index}>{region}</option>
-                  ))}
-                </select>
-              </div>
-              <input required placeholder="Введіть місто" type="text" />
-            </div>
-          </div>
-          <button className={style.button}>Зареєструвати роботодавця</button>
-        </form>
-      </section>
-    </div>
-  );
+const initialFormState = {
+  isCompany: false,
+  name: '',
+  email: '',
+  mobile: '',
+  address: '',
+  region: '',
+  sex: '',
+  dateOfBirth: '',
+  companyType: '',
 };
 
-export default Form;
+export default function RegistrationForm() {
+  const [formData, setFormData] = useState(initialFormState);
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    alert('Реєстрація успішна!');
+    setFormData(initialFormState); // Очищення форми після відправки
+  };
+
+  return (
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Реєстрація</h2>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.formGroup}>
+          <label>
+            <input
+              type="checkbox"
+              name="isCompany"
+              checked={formData.isCompany}
+              onChange={handleInputChange}
+            />
+            Реєстрація як компанія
+          </label>
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="name">Ім'я {formData.isCompany && 'компанії'}</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="mobile">Номер телефону</label>
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="address">Адреса</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            value={formData.address}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label htmlFor="region">Область</label>
+          <select
+            id="region"
+            name="region"
+            value={formData.region}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="">Оберіть область</option>
+            <option value="Київська">Київська</option>
+            <option value="Львівська">Львівська</option>
+            <option value="Одеська">Одеська</option>
+            <option value="Харківська">Харківська</option>
+            <option value="Дніпропетровська">Дніпропетровська</option>
+          </select>
+        </div>
+
+        {!formData.isCompany && (
+          <>
+            <div className={styles.formGroup}>
+              <label htmlFor="sex">Стать</label>
+              <select
+                id="sex"
+                name="sex"
+                value={formData.sex}
+                onChange={handleInputChange}
+                required
+              >
+                <option value="">Оберіть стать</option>
+                <option value="male">Чоловік</option>
+                <option value="female">Жінка</option>
+                <option value="other">Інше</option>
+              </select>
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="dateOfBirth">Дата народження</label>
+              <input
+                type="date"
+                id="dateOfBirth"
+                name="dateOfBirth"
+                value={formData.dateOfBirth}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+          </>
+        )}
+
+        {formData.isCompany && (
+          <div className={styles.formGroup}>
+            <label htmlFor="companyType">Тип компанії</label>
+            <input
+              type="text"
+              id="companyType"
+              name="companyType"
+              value={formData.companyType}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+        )}
+
+        <button type="submit" className={styles.submitButton}>Зареєструватися</button>
+      </form>
+    </div>
+  );
+}
 
