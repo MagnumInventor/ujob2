@@ -10,9 +10,7 @@ import ServiceImpact from '../../components/landing/ServiceImpact';
 import GetStarted from '../../components/landing/GetStarted';
 import FutureProspects from '../../components/landing/FutureProspects';
 import DonationAppeal from '../../components/landing/DonationAppeal';
-import AdditionalInfo from '../../components/landing/AdditionalInfo';
 
-import Enter from './Enter';
 
 export default function Landing() {
   return (

@@ -1,6 +1,8 @@
 import Header from '../../components/common/Header'
 import Footer from '../../components/common/Footer'
 
+import styles from '../../styles/common/HeaderMod.module.css'
+
 export default function SupportUs() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white">

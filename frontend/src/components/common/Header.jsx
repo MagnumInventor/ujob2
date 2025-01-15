@@ -29,13 +29,12 @@ export default function Header() {
       <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
         <Link to="/about">About</Link>
         <Link to="/services">Services</Link>
-        <Link to="/contact">Contact</Link>
         <Link to="/faqs">FAQ's</Link>
         <Link to="/support-us">Support Us</Link>
         <Link to="/pricing">Pricing</Link>
       </nav>
       <div className={styles.actions}>
-        <Link to="/get-started" className="btn btn-primary">Get Started</Link>
+        <Link to="/Enter" className="btn btn-primary">Get Started</Link>
         <button className={styles.menuToggle} onClick={toggleMenu}>
           <span></span>
           <span></span>

@@ -1,3 +1,4 @@
+// routes.jsx
 import { createBrowserRouter } from 'react-router-dom';
 
 import Home from '../pages/сommon/LandingPage';
@@ -7,7 +8,9 @@ import SupportUs from '../pages/сommon/SupportUs';
 import FAQs from '../pages/сommon/FAQs';
 import Pricing from '../pages/сommon/Pricing';
 
-export const router = createBrowserRouter([
+import Enter from '../pages/сommon/Enter';
+
+export const routes = [
   {
     path: '/',
     element: <Home />,
@@ -33,5 +36,12 @@ export const router = createBrowserRouter([
     path: '/pricing',
     element: <Pricing />,
   },
-]);
+  
+
+
+  {
+    path: '/enter',
+    element: <Enter />,
+  },
+];
 

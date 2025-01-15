@@ -1,13 +1,13 @@
+// App.js
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Import Routes and Route
-import { router } from './routes/routes';
-import './styles/globals.css'; 
-import './styles/common/LoadingScreen.css'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { routes } from './routes/routes';
+import './styles/globals.css';
+import './styles/common/LoadingScreen.css';
 
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // Simulate loading
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 2000); // 2 seconds
     return () => clearTimeout(timer);
@@ -22,8 +22,7 @@ function App() {
           </div>
         ) : (
           <Routes>
-            {/* Replace the RouterProvider with Routes and Route */}
-            {router.map((route, index) => (
+            {routes.map((route, index) => (
               <Route key={index} path={route.path} element={route.element} />
             ))}
           </Routes>
@@ -34,4 +33,3 @@ function App() {
 }
 
 export default App;
-
