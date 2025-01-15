@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from '../../styles/common/Form.module.css';
+import styles from './Form.module.css';
 
 const initialFormState = {
   isCompany: false,

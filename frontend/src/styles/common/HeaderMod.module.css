@@ -7,29 +7,30 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scrolled {
-  background-color: rgba(14, 6, 20, 0.9);
+  background-color: rgba(14, 6, 20, 0.7);
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .logoText {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-left: 5px;
   margin-top: 15px;
+
   font-weight: bold;
   animation: blink 1s infinite;
+  text-decoration: none;
 }
 
 @keyframes blink {
