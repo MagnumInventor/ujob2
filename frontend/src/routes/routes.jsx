@@ -10,6 +10,10 @@ import Pricing from '../pages/сommon/Pricing';
 
 import Enter from '../pages/сommon/Enter';
 
+
+// Worker pages:
+import Catalogue from '../pages/user/worker/Catalogue';
+
 export const routes = [
   {
     path: '/',
