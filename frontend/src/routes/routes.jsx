@@ -1,5 +1,4 @@
 // routes.jsx
-import { createBrowserRouter } from 'react-router-dom';
 
 import Home from '../pages/сommon/LandingPage';
 import About from '../pages/сommon/AboutUs';

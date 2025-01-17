@@ -4,7 +4,7 @@ import '../../styles/user/worker/ProjectsContainer.module.css';
 
 import Header from '../../components/common/Header';
 import Footer from '../../components/common/Footer';
-import ProjectsContainer from '../../components/projects/ProjectsContainer';
+import ProjectsContainer from '../../user/worker/ProjectsContainer';
 
 function SafeComponent({ Component }) {
   try {
