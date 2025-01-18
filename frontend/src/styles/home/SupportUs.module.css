@@ -1,0 +1,95 @@
+.supportUs {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+}
+
+.description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.supportOptions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.supportCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.supportCard:hover {
+  transform: translateY(-5px);
+}
+
+.supportCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.supportCard p {
+  margin-bottom: 1.5rem;
+}
+
+.donateButton {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donateButton:hover {
+  background-color: var(--primary-hover);
+}
+
+.monobankEmbed {
+  margin-top: 3rem;
+}
+
+.monobankEmbed h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.monobankEmbed iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .supportOptions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .supportCard {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+

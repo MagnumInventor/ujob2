@@ -1,10 +1,11 @@
 import React from 'react';
-import '../../styles/globals.css';
-import '../../components/auth/Form.module.css';
+import styles from '../../components/auth/Form.module.css';
 
 import Header from '../../components/common/Header';
 import Footer from '../../components/common/Footer';
 import Form from '../../components/auth/Registration';
+
+import Layout from '../../components/Layout';
 
 function SafeComponent({ Component }) {
   try {
@@ -17,15 +18,13 @@ function SafeComponent({ Component }) {
 
 function Ent() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white">
-      <SafeComponent Component={Header} />
-      <main>
+    <Layout>
+      <div className={styles.register}>
+        <h1 className={styles.title}>Register</h1>
         <SafeComponent Component={Form} />
-      </main>
-      <SafeComponent Component={Footer} />
-    </div>
+      </div>
+    </Layout>
   );
 }
 
 export default Ent;
-
