@@ -1,0 +1,28 @@
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--foreground);
+  }
+  
+  .main {
+    flex: 1;
+    padding: 6rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .main {
+      padding: 5rem 1rem 3rem;
+    }
+  }
+
+  .background-gradient {
+    background: linear-gradient(135deg, #0e0614, #182737, #27527d, #43668b, #7297bd);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  

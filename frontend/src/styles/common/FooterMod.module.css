@@ -1,25 +1,74 @@
 .footer {
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 2rem;
+  padding: 4rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .content {
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.logoSection {
+  flex: 1;
+}
+
+.logo {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.linksSection {
+  flex: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.linkColumn {
   display: flex;
   flex-direction: column;
+}
+
+.linkColumn h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.linkColumn a {
+  color: var(--secondary);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.linkColumn a:hover {
+  color: var(--accent);
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .socialLinks {
   display: flex;
-  justify-content: center;
   gap: 1rem;
 }
 
 .socialLinks a {
-  color: white;
+  color: var(--foreground);
   opacity: 0.7;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -29,68 +78,31 @@
   transform: translateY(-2px);
 }
 
-.contact, .legal {
-  text-align: center;
+.copyright {
+  font-size: 0.9rem;
+  color: var(--secondary);
 }
 
-.legal a {
-  color: white;
-  opacity: 0.7;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  transition: opacity 0.2s ease;
-}
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
 
-.legal a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
+  .logoSection {
+    margin-bottom: 2rem;
+  }
 
-.footer {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-}
+  .linksSection {
+    flex-direction: column;
+  }
 
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
+  .linkColumn {
+    margin-bottom: 1.5rem;
+  }
 
-.socialLinks {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.socialLinks a {
-  color: white;
-  opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.socialLinks a:hover {
-  opacity: 1;
-  transform: translateY(-2px);
-}
-
-.contact, .legal {
-  text-align: center;
-}
-
-.legal a {
-  color: white;
-  opacity: 0.7;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  transition: opacity 0.2s ease;
-}
-
-.legal a:hover {
-  opacity: 1;
-  text-decoration: underline;
+  .bottomSection {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
 }
 
