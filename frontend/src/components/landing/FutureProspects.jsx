@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import styles from '../../styles/home/FutureProspectsMod.module.css'
+import styles from '../../styles/landing/FutureProspectsMod.module.css'
 
 const features = [
   { title: 'Comprehensive user dashboards', description: 'Manage your profile, applications, and job postings all in one place.' },

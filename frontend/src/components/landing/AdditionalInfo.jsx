@@ -1,4 +1,4 @@
-import styles from '../../styles/home/AdditionalInfoMod.module.css'
+import styles from '../../styles/landing/AdditionalInfoMod.module.css'
 
 export default function AdditionalInfo() {
   return (

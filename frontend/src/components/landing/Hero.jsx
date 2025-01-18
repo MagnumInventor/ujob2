@@ -1,4 +1,4 @@
-import styles from '../../styles/home/HeroMod.module.css'
+import styles from '../../styles/landing/HeroMod.module.css'
 
 export default function Hero() {
   return (

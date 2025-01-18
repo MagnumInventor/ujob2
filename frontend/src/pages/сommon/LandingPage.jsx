@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'; // Додано useState та useEffect
-import '../../styles/globals.css'; 
+import styles from '../../styles/globals.css'; 
 import '../../styles/common/HeaderMod.module.css'; 
 
 import Header from '../../components/common/Header';

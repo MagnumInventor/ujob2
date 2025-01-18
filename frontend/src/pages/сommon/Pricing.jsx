@@ -1,16 +1,16 @@
-import Header from '../../components/common/Header'
-import Footer from '../../components/common/Footer'
+import Layout from '../../components/Layout';
+import styles from '../../styles/home/Pricing.module.css';
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white">
-      <Header />
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-4">Pricing</h1>
-        <p className="mb-4">Explore our pricing options for job seekers and employers...</p>
-      </main>
-      <Footer />
-    </div>
-  )
+    <Layout>
+      <div className={styles.pricing}>
+        <h1 className={styles.title}>Pricing</h1>
+        <p className={styles.description}>
+          Explore our pricing options for job seekers and employers. Find the plan that suits your needs.
+        </p>
+        {/* Add pricing plans here */}
+      </div>
+    </Layout>
+  );
 }
-
