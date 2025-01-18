@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../styles/globals.css';
-import '../../styles/user/worker/ProjectsContainer.module.css';
+import '../../../styles/globals.css';
+import '../../../styles/user/worker/ProjectsContainer.module.css';
 
-import Header from '../../components/common/Header';
-import Footer from '../../components/common/Footer';
-import ProjectsContainer from '../../user/worker/ProjectsContainer';
+import Header from '../../../components/common/Header';
+import Footer from '../../../components/common/Footer';
+import ProjectsContainer from '../../../components/user/worker/ProjectContainer';
 
 function SafeComponent({ Component }) {
   try {
