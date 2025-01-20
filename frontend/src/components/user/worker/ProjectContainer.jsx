@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import json from '../../../temporary/catalogue.json';
-
+import style from '../../../styles/user/worker/ProjectsContainer.module.css';
+import json from '../../../temporary/catalogue.json'
+import catalogue from '../../data/catalogue.json';
 
 useEffect(() => {
-  setProjects(json.map((item) => item.project));
+  setProjects(catalogue.map((item) => item.project));
 }, []);
+
 
 // Компонент для відображення учасників проекту
 const Team = ({ team }) => (
@@ -61,12 +63,14 @@ const ProjectCard = ({ project }) => {
   );
 };
 
+
+
 // Основний компонент для відображення всіх проектів
 const ProjectsContainer = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch('/temporary/catalogue.json')
+    fetch('../../../temporary/catalogue.json')
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -78,7 +82,8 @@ const ProjectsContainer = () => {
       })
       .catch((error) => console.error('Error loading JSON data:', error));
   }, []);
-  
+
+
 
   return (
     <div id="projects-container">
@@ -90,3 +95,4 @@ const ProjectsContainer = () => {
 };
 
 export default ProjectsContainer;
+
