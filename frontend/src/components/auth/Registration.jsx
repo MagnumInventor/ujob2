@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from './Form.module.css';
+import { Link } from 'react-router-dom'
+import styles from '../../styles/registration/registration.module.css';
 
 const initialFormState = {
   isCompany: false,
@@ -163,6 +164,7 @@ export default function RegistrationForm() {
         )}
 
         <button type="submit" className={styles.submitButton}>Зареєструватися</button>
+        <Link className={styles.enterButton} to="/catalogue">Увійти</Link>
       </form>
     </div>
   );

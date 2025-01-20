@@ -46,5 +46,10 @@ export const routes = [
     path: '/enter',
     element: <Enter />,
   },
+
+  {
+    path: '/catalogue',
+    element: <Catalogue />,
+  },
 ];
 

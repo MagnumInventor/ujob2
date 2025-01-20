@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import styles from '../../styles/home/SupportUs.module.css'
 import Layout from '../../components/Layout';
