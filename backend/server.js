@@ -1,27 +1,23 @@
 const express = require('express');
-const cors = require('cors');
-const path = require('path'); // Для обслуговування статичних файлів
 const app = express();
+const port = 5000; // Виберіть порт, на якому буде працювати сервер
+const path = require('path');
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+// Включення статичних файлів з папки public
+app.use(express.static(path.join(__dirname, 'public')));
 
-// API маршрути
-app.get('/api/example', (req, res) => {
-    res.json({ message: 'Hello from backend!' });
-});
-
-// Обслуговування статичних файлів фронтенду
-const frontendPath = path.join(__dirname, '../frontend/build'); // Шлях до зібраного фронтенду
-app.use(express.static(frontendPath));
-
-// Всі інші маршрути перенаправляються на фронтенд
-app.get('*', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html'));
+// Маршрут для завантаження JSON
+app.get('/api/catalogue', (req, res) => {
+  try {
+    const data = require('./data/catalogue.json'); // Вкажіть шлях до вашого JSON-файлу
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching catalogue:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 // Запуск сервера
-app.listen(5000, () => {
-    console.log('Server is running on port 5000');
+app.listen(port, () => {
+  console.log(`Сервер запущено на http://localhost:${port}`);
 });
