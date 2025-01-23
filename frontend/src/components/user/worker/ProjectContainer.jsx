@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from '../../../styles/user/worker/ProjectsContainer.module.css';
 import json from '../../../temporary/catalogue.json'
-import catalogue from '../../data/catalogue.json';
-
-useEffect(() => {
-  setProjects(catalogue.map((item) => item.project));
-}, []);
+import catalogue from '../../../../public/data/catalogue.json';
 
 
 // Компонент для відображення учасників проекту
@@ -65,23 +61,25 @@ const ProjectCard = ({ project }) => {
 
 
 
-// Основний компонент для відображення всіх проектів
+// Основний компонент для відображення всіх проектів ../../../temporary/catalogue.json
 const ProjectsContainer = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch('../../../temporary/catalogue.json')
+    fetch('../../../../public/data/catalogue.json')
       .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
+        return response.text(); // Log response as plain text
       })
-      .then((data) => {
+      .then((text) => {
+        console.log('Fetched content:', text); // Check the fetched content
+        const data = JSON.parse(text);
         setProjects(data.map((item) => item.project));
       })
       .catch((error) => console.error('Error loading JSON data:', error));
   }, []);
+  
 
 
 
