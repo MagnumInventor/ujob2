@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import style from '../../../styles/user/worker/ProjectsContainer.module.css';
-import json from '../../../temporary/catalogue.json'
-import catalogue from '../../../../public/data/catalogue.json';
 
-
-// Компонент для відображення учасників проекту
-const Team = ({ team }) => (
+const Team = ({ team = [] }) => (
   <div className="team">
     <h3>Учасники проекту:</h3>
     {team.map((member, index) => (
@@ -16,8 +11,7 @@ const Team = ({ team }) => (
   </div>
 );
 
-// Компонент для відображення вакансій
-const Vacancies = ({ vacancies }) => (
+const Vacancies = ({ vacancies = [] }) => (
   <div className="card-body">
     {vacancies.map((role, index) => (
       <div key={index} className="role">
@@ -27,7 +21,6 @@ const Vacancies = ({ vacancies }) => (
   </div>
 );
 
-// Основний компонент картки проекту
 const ProjectCard = ({ project }) => {
   const [vacanciesActive, setVacanciesActive] = useState(false);
 
@@ -59,29 +52,20 @@ const ProjectCard = ({ project }) => {
   );
 };
 
-
-
-// Основний компонент для відображення всіх проектів ../../../temporary/catalogue.json
 const ProjectsContainer = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch('../../../../public/data/catalogue.json')
-      .then((response) => {
-        console.log('Response status:', response.status);
-        console.log('Response headers:', response.headers);
-        return response.text(); // Log response as plain text
-      })
-      .then((text) => {
-        console.log('Fetched content:', text); // Check the fetched content
-        const data = JSON.parse(text);
-        setProjects(data.map((item) => item.project));
-      })
-      .catch((error) => console.error('Error loading JSON data:', error));
+    fetch('/data/catalogue.json')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => setProjects(data.map((item) => item.project)))
+    .catch((error) => console.error('Error loading JSON data:', error));  
   }, []);
-  
-
-
 
   return (
     <div id="projects-container">
@@ -93,4 +77,5 @@ const ProjectsContainer = () => {
 };
 
 export default ProjectsContainer;
+
 
