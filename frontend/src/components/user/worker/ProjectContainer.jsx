@@ -4,7 +4,7 @@ const ProjectsContainer = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch('./data/catalogue.json') // Оновлено шлях до JSON-файлу
+    fetch('./data/catalogue.json') //     Оновлено шлях до JSON-файлу
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
