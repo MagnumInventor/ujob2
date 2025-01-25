@@ -1,5 +1,9 @@
 /* global.css */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Фон з градієнтом для загального фону */
 .background-gradient {
   background: linear-gradient(135deg, #0e0614, #182737, #27527d, #43668b, #7297bd) !important;

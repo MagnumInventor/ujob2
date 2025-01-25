@@ -29,7 +29,7 @@ const App = () => {
     }, []);
 
     return (
-      <div className="min-h-screen background-gradient text-white">
+      <div className="background-gradient text-white min-h-screen">
           <Header />
           <main>
             <Hero />
