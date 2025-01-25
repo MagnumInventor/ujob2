@@ -2,9 +2,9 @@
 
 /* Фон з градієнтом для загального фону */
 .background-gradient {
-  background: linear-gradient(135deg, #0e0614, #182737, #27527d, #43668b, #7297bd);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
+  background: linear-gradient(135deg, #0e0614, #182737, #27527d, #43668b, #7297bd) !important;
+  background-size: 400% 400% !important;
+  animation: gradientAnimation 10s ease infinite !important;
 }
 
 /* Анімація зміни градієнту */

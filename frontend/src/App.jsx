@@ -1,3 +1,5 @@
+// App.jsx
+
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/LandingPage";
@@ -15,7 +17,7 @@ import FutureProspects from './components/landing/FutureProspects'
 import DonationAppeal from './components/landing/DonationAppeal'
 import AdditionalInfo from './components/landing/AdditionalInfo'
 
-import { MyProvider } from './context/MyContext';  // Імпортуємо провайдер
+import './styles/globals.css';
 
 const App = () => {
     const [data, setData] = useState(null);
@@ -27,7 +29,7 @@ const App = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white">
+      <div className="min-h-screen background-gradient text-white">
           <Header />
           <main>
             <Hero />
