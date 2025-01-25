@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../styles/globals.css';
-import '../../../styles/user/worker/ProjectsContainer.module.css';
+import '../../../styles/user/worker/ProjectsCatalogue.module.css';
 
 import Header from '../../../components/common/Header';
 import Footer from '../../../components/common/Footer';

@@ -1,64 +1,98 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from "react";
+import styles from "../../../styles/user/worker/ProjectsCatalogue.module.css";
 
-const ProjectsContainer = () => {
-  const [projects, setProjects] = useState([]);
+const ProjectCatalogue = () => {
+  const [projects, setProjects] = useState([
+    {
+      name: "Project 1",
+      description: "This is a description for Project 1",
+      vacancies: ["Developer", "Designer", "Project Manager"],
+      team: [
+        { name: "John Doe", image: "/path/to/john.jpg" },
+        { name: "Jane Smith", image: "/path/to/jane.jpg" },
+      ],
+    },
+    {
+      name: "Project 2",
+      description: "This is a description for Project 2",
+      vacancies: ["Marketing Specialist", "Content Writer"],
+      team: [
+        { name: "Alice Johnson", image: "/path/to/alice.jpg" },
+        { name: "Bob Williams", image: "/path/to/bob.jpg" },
+      ],
+    },
+  ]);
 
-  useEffect(() => {
-    fetch('./data/catalogue.json') //     Оновлено шлях до JSON-файлу
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => setProjects(data.map((item) => item.project))) // Витягуємо `project` з кожного об'єкта
-      .catch((error) => console.error('Error loading JSON data:', error));
-  }, []);
+  const [activeVacancies, setActiveVacancies] = useState({});
+
+  const toggleVacancies = (projectName) => {
+    setActiveVacancies((prev) => ({
+      ...prev,
+      [projectName]: !prev[projectName],
+    }));
+  };
 
   return (
-    <div id="projects-container">
-      {projects.map((project, index) => (
-        <div key={index} className="card">
-          <div className="card-header">
-            <h2>{project.name}</h2>
+    <div className={styles.container}>
+      <div id="projects-container" className={styles.projectsContainer}>
+        {projects.map((project, index) => (
+          <div key={index} className={styles.card}>
+            <div className={styles.cardHeader}>
+              <h2>{project.name}</h2>
+            </div>
+            <div className={styles.vacancyInfo}>
+              <h3>Опис:</h3>
+              <p>{project.description}</p>
+            </div>
+            <button
+              className={styles.openVacancyButton}
+              onClick={() => toggleVacancies(project.name)}
+            >
+              <span
+                className={`${styles.checkLeft} ${
+                  activeVacancies[project.name] ? styles.active : ""
+                }`}
+              >
+                &#11013;
+              </span>
+              ВІЛЬНІ ПОСАДИ
+              <span
+                className={`${styles.checkRight} ${
+                  activeVacancies[project.name] ? styles.active : ""
+                }`}
+              >
+                &#11013;
+              </span>
+            </button>
+            <div
+              className={`${styles.cardBody} ${
+                activeVacancies[project.name] ? styles.active : ""
+              }`}
+            >
+              {project.vacancies.map((role, roleIndex) => (
+                <div key={roleIndex} className={styles.role}>
+                  {role}
+                </div>
+              ))}
+            </div>
+            <div className={styles.team}>
+              <h3>Учасники проекту:</h3>
+              {project.team.map((member, memberIndex) => (
+                <div key={memberIndex} className={styles.teamMember}>
+                  {member.name}{" "}
+                  <img
+                    src={member.image || "/placeholder.svg"}
+                    alt="member-image"
+                  />
+                </div>
+              ))}
+            </div>
+            <button className={styles.viewButton}>ДЕТАЛЬНІШЕ</button>
           </div>
-          <div className="vacancy-info">
-            <h3>Опис:</h3>
-            <p>{project.description}</p>
-          </div>
-          <button
-            className="open-vacancy-button"
-            onClick={() => {
-              const vacancies = document.getElementById(`vacancies-${index}`);
-              vacancies.classList.toggle('active');
-            }}
-          >
-            <span className="check-left">&#11013;</span> ВІЛЬНІ ПОСАДИ <span className="check-right">&#11013;</span>
-          </button>
-          <div id={`vacancies-${index}`} className="card-body">
-            {project.vacancies.map((role, roleIndex) => (
-              <div key={roleIndex} className="role">
-                {role}
-              </div>
-            ))}
-          </div>
-          <div className="team">
-            <h3>Учасники проекту:</h3>
-            {project.team.map((member, memberIndex) => (
-              <div key={memberIndex} className="team-member">
-                <span>{member.name}</span>
-                <img src={member.image} alt={`${member.name}`} />
-              </div>
-            ))}
-          </div>
-          <button className="view-button">ДЕТАЛЬНІШЕ</button>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
 
-export default ProjectsContainer;
-
-
-
+export default ProjectCatalogue;

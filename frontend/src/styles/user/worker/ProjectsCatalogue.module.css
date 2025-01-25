@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 2px;
+  width: 1500px;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+  margin-left: 150px;
+}
+
+.card {
+  background-color: #111111;
+  border: 3px solid #ff6600;
+  border-radius: 15px;
+  max-width: 500px;
+  max-height: 1000px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  margin-top: 125px;
+  margin-bottom: 125px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: white;
+  position: relative;
+}
+
+.cardBody {
+  display: none;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px;
+  justify-items: right;
+}
+
+.cardBody.active {
+  display: block;
+}
+
+.vacancyInfo {
+  font-size: 15px;
+  font-family: "Montserrat";
+  padding: 10px;
+  text-align: left;
+}
+
+.cardHeader {
+  background: linear-gradient(to bottom, #ffffff, #99ccff);
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: #111111b4 0px 0 10px;
+  font-size: 22px;
+}
+
+.role {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  padding: 4px;
+  margin-right: 25px;
+  margin-bottom: 5px;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+}
+
+.team {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-items: left;
+}
+
+.teamMember {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  padding: 4px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  background-color: #613fbe;
+}
+
+.teamMember img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 3px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+}
+
+.viewButton {
+  background-color: #111111;
+  border: 3px solid #ff6600;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 75px;
+  width: 349px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.viewButton:hover {
+  background-color: #ff6600;
+  color: #111111;
+}
+
+.openVacancyButton {
+  background-color: #27185098;
+  border: 2px solid #8d8d8d;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  height: 50px;
+  width: 349px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.openVacancyButton:hover {
+  background-color: #613fbe;
+}
+
+.checkLeft,
+.checkRight {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.checkRight.active,
+.checkLeft.active {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .projectsContainer {
+    gap: 20px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
+  }
+}
