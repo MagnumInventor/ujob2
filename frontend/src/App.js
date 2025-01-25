@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white flex items-center justify-center">
+      <div className="min-h-screen text-white flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #0e0614, #182737, #27527d, #43668b, #7297bd) !important;' }}>
         {loading ? (
           <div className="loading-screen">
             <p className="animated-text">Ujob loading</p>

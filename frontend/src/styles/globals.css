@@ -160,11 +160,6 @@
 
 
 
-/*
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --background-start: 14 6 20;
   --background-end: 66 102 139;
@@ -219,7 +214,7 @@ body {
 .paragraph {
   @apply text-gray-300 leading-relaxed mb-4;
 }
-*/
+
 
 .glow {
   text-shadow: 0 0 10px #ffffff, 0 0 20px #00aaff, 0 0 30px #00aaff;
