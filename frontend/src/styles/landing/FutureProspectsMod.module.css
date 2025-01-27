@@ -7,6 +7,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .accordionWrapper {
@@ -27,6 +28,7 @@
 
 .accordionTrigger {
   width: 100%;
+  margin-left: 15px;
   text-align: left;
   background: none;
   border: none;
@@ -43,6 +45,7 @@
 }
 
 .accordionContent {
+  margin-left: 10px;
   padding: 1rem 0;
   color: #a0aec0;
 }

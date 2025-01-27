@@ -1,7 +1,9 @@
 .footer {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 4rem 0 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+  padding: 4rem 0 3rem;
   margin-top: 4rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
 .container {
@@ -13,17 +15,22 @@
 .content {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .logoSection {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   color: var(--foreground);
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .linksSection {
@@ -38,20 +45,23 @@
 }
 
 .linkColumn h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
   color: var(--foreground);
+  font-weight: bold;
 }
 
 .linkColumn a {
   color: var(--secondary);
   text-decoration: none;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.2rem 0;
 }
 
 .linkColumn a:hover {
   color: var(--accent);
+  transform: translateX(5px);
 }
 
 .bottomSection {
@@ -59,27 +69,30 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.1rem;
+  color: var(--foreground);
 }
 
 .socialLinks {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .socialLinks a {
   color: var(--foreground);
-  opacity: 0.7;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 1.2rem;
 }
 
 .socialLinks a:hover {
   opacity: 1;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .copyright {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--secondary);
 }
 
@@ -90,10 +103,12 @@
 
   .logoSection {
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   .linksSection {
     flex-direction: column;
+    align-items: center;
   }
 
   .linkColumn {
@@ -103,6 +118,6 @@
   .bottomSection {
     flex-direction: column-reverse;
     gap: 1rem;
+    text-align: center;
   }
 }
-

@@ -4,11 +4,11 @@ import { useState } from 'react'
 import styles from '../../styles/landing/FutureProspectsMod.module.css'
 
 const features = [
-  { title: 'Comprehensive user dashboards', description: 'Manage your profile, applications, and job postings all in one place.' },
-  { title: 'Integration with volunteering platforms', description: 'Find volunteering opportunities that align with your career goals.' },
-  { title: 'Real-time application tracking', description: 'Stay updated on the status of your job applications in real-time.' },
-  { title: 'Advanced search filters', description: 'Find the perfect job or candidate with our powerful search tools.' },
-  { title: 'Personalized recommendations', description: 'Receive job or candidate suggestions tailored to your profile and preferences.' },
+  { title: 'Зручне налаштування профілю', description: 'Керуйте своїм профілем, заявками та вакансіями в одному місці.' },
+  { title: 'Інтеграція з благодійними та волонтерськими організаціями', description: 'Знайдіть можливості для волонтерства, що відповідають вашим карʼєрним цілям.' },
+  { title: 'Слідкування за заявками в реальному часі', description: 'Отримуйте актуальну інформацію про статус ваших заявок.' },
+  { title: 'Розширені пошукові фільтри', description: 'Знайдіть ідеальну роботу чи кандидата за допомогою наших потужних інструментів пошуку.' },
+  { title: 'Персоналізовані рекомендації', description: 'Отримуйте пропозиції щодо роботи чи кандидатів, що відповідають вашому профілю та уподобанням.' },
 ]
 
 export default function FutureProspects() {

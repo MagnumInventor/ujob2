@@ -5,11 +5,25 @@
 @tailwind utilities;
 
 /* Фон з градієнтом для загального фону */
-.background-gradient {
-  background: linear-gradient(135deg, #0e0614, #182737, #27527d, #43668b, #7297bd) !important;
-  background-size: 400% 400% !important;
-  animation: gradientAnimation 10s ease infinite !important;
+body {
+  background: linear-gradient(135deg,
+    var(--background-start),
+    var(--background-mid),
+    var(--background-end)
+  );
 }
+
+.background-gradient {
+  background: linear-gradient(135deg,
+    var(--background-start),
+    var(--background-mid),
+    var(--background-end)
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+
 
 /* Анімація зміни градієнту */
 @keyframes gradientAnimation {
@@ -30,9 +44,10 @@
   /* V0 */
 
   :root {
-    --background-start: #0e0614;
-    --background-mid: #1a2537;
-    --background-end: #42668b;
+      --background-start: 14, 6, 20;
+      --background-mid: 26, 37, 55;
+      --background-end: 66, 102, 139;
+    
     --foreground: #e5ecf6;
     --primary: #ff6b00;
     --primary-hover: #ff8c00;
@@ -53,6 +68,21 @@
     padding: 0;
   }
   
+  @layer utilities {
+    .bg-background {
+      background: linear-gradient(135deg,
+        rgb(var(--background-start)),
+        rgb(var(--background-mid)),
+        rgb(var(--background-end))
+      );
+    }
+  }
+  
+  .from-blue-900 {
+    --tw-gradient-from: var(--background-start);
+  }
+  
+
   .text-gradient {
     background: var(--text-gradient);
     -webkit-background-clip: text;
@@ -193,21 +223,23 @@ body {
   }
 }
 
+
+
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-500;
 }
 
 .glow {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px #73c2fb, 0 0 30px #73c2fb;
 }
 
 .volumetric {
-  @apply relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 p-1;
+  @apply relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 to-blue-700 p-1;
 }
 
 .volumetric::before {
   content: '';
-  @apply absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 opacity-30 blur-xl;
+  @apply absolute inset-0 bg-gradient-to-br from-blue-400 to-teal-600 opacity-30 blur-xl;
   z-index: -1;
 }
 
@@ -215,10 +247,13 @@ body {
   @apply text-gray-300 leading-relaxed mb-4;
 }
 
-
 .glow {
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #00aaff, 0 0 30px #00aaff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #5eb3e4, 0 0 30px #5eb3e4;
 }
+
+
+
+
 
 .btn-primary {
   color: #ffffff;
