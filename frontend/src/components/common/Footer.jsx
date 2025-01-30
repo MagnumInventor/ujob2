@@ -1,5 +1,8 @@
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 import styles from '../../styles/common/FooterMod.module.css'
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -8,25 +11,27 @@ export default function Footer() {
         <div className={styles.content}>
           <div className={styles.logoSection}>
             <h2 className={styles.logo}>Ujob</h2>
-            <p>Connecting talent with opportunities</p>
+            <p>Поєднуємо талант з можливостями</p>
           </div>
           <div className={styles.linksSection}>
             <div className={styles.linkColumn}>
-              <h3>Company</h3>
-              <a href="/about">About Us</a>
-              <a href="/services">Services</a>
-              <a href="/contact">Contact</a>
+              <h3>Меню</h3>
+        <Link to="/about">Про проєкт</Link>
+        <Link to="/services">Продукт</Link>
+        <Link to="/faqs">Часті запитання</Link>
+        <Link to="/support-us">Підтримка проєкту</Link>
+        <Link to="/pricing">Тарифи</Link>
             </div>
             <div className={styles.linkColumn}>
-              <h3>Resources</h3>
+              <h3>Інформація</h3>
               <a href="/faqs">FAQ's</a>
-              <a href="/support-us">Support Us</a>
-              <a href="/pricing">Pricing</a>
+              <a href="/support-us">Хід розробки</a>
+              <a href="/pricing">Тарифи</a>
             </div>
             <div className={styles.linkColumn}>
-              <h3>Legal</h3>
-              <a href="/privacy">Privacy Policy</a>
-              <a href="/terms">Terms of Service</a>
+              <h3>Юридична складова</h3>
+              <a href="/privacy">Політика конфіденційності</a>
+              <a href="/terms">Умови використання</a>
             </div>
           </div>
         </div>
@@ -37,7 +42,7 @@ export default function Footer() {
             <a href="#" aria-label="Instagram"><Instagram /></a>
             <a href="#" aria-label="LinkedIn"><Linkedin /></a>
           </div>
-          <p className={styles.copyright}>© 2025 Ujob - All Rights Reserved</p>
+          <p className={styles.copyright}>© 2025 Ujob - Всі права захищені</p>
         </div>
       </div>
     </footer>
