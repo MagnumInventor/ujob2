@@ -5,46 +5,90 @@ export default function Pricing() {
   return (
     <Layout>
       <div className={styles.pricing}>
-        <h1 className={styles.title}>Pricing</h1>
+        <h1 className={styles.title}>Ціни</h1>   
         <p className={styles.description}>
-          Explore our pricing options for job seekers and employers. Find the plan that suits your needs.
+          Ознайомтесь з нашими варіантами ціноутворення для шукачів роботи та роботодавців. Знайдіть план, який відповідає вашим потребам.
         </p>
+
+        <h2 className={styles.forworker}>Для працівників</h2>
         <div className={styles.pricingPlans}>
           <div className={styles.plan}>
-            <h2 className={styles.planName}>Basic</h2>
-            <p className={styles.planPrice}>$0</p>
+            <h2 className={styles.planName}>Базовий</h2>
+            <p className={styles.planPrice}>$1</p>
             <ul className={styles.planFeatures}>
-              <li>Create a profile</li>
-              <li>Browse job listings</li>
-              <li>Apply to 5 jobs per month</li>
+              <li>Створення профілю</li>
+              <li>Перегляд вакансій</li>
+              <li>Подання до 5 заявок на місяць</li>
             </ul>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary">Почати</button>
           </div>
           <div className={styles.plan}>
-            <h2 className={styles.planName}>Pro</h2>
-            <p className={styles.planPrice}>$19.99/mo</p>
+            <h2 className={styles.planName}>Профі</h2>
+            <p className={styles.planPrice}>$2.5/міцясь</p>
             <ul className={styles.planFeatures}>
-              <li>All Basic features</li>
-              <li>Unlimited job applications</li>
-              <li>Priority support</li>
-              <li>Resume review</li>
+              <li>Створення профілю</li>
+              <li>Перегляд вакансій</li>
+              <li>Подання до 15 заявок на місяць</li>
+              <li>Доступ до <strong>ШІ</strong> помічника</li>
             </ul>
-            <button className="btn btn-primary">Upgrade to Pro</button>
+            <button className="btn btn-primary">Оновити до профі</button>
+          </div>
+          </div>
+
+          
+
+      <h2 className={styles.forcompany} >Для роботодавців</h2>
+        <div className={styles.pricingPlans}>
+          <div className={styles.plan}>
+            <h2 className={styles.planName}>Базовий</h2>
+            <p className={styles.planPrice}>$1</p>
+            <ul className={styles.planFeatures}>
+              <li>Створення профілю</li>
+              <li>Перегляд вакансій</li>
+              <li>Подання до 5 заявок на місяць</li>
+            </ul>
+            <button className="btn btn-primary">Почати</button>
           </div>
           <div className={styles.plan}>
-            <h2 className={styles.planName}>Enterprise</h2>
-            <p className={styles.planPrice}>Custom</p>
+            <h2 className={styles.planName}>Профі</h2>
+            <p className={styles.planPrice}>$4.99/міцясь</p>
             <ul className={styles.planFeatures}>
-              <li>All Pro features</li>
-              <li>Customized solutions</li>
-              <li>Dedicated account manager</li>
-              <li>API access</li>
+              <li>Створення профілю</li>
+              <li>Перегляд вакансій</li>
+              <li>Подання до 15 заявок на місяць</li>
+              <li>Доступ до <strong>ШІ</strong> помічника</li>
             </ul>
-            <button className="btn btn-primary">Contact Sales</button>
+            <button className="btn btn-primary">Оновити до профі</button>
           </div>
-        </div>
+          <div className={styles.plan}>
+            <h2 className={styles.planName}>Профі</h2>
+            <p className={styles.planPrice}>$14.99/місяць</p>
+            <ul className={styles.planFeatures}>
+              <li>Усі функції Профі плану</li>
+              <li>Безлімітні заявки на вакансії</li>
+              <li>Пріоритетна підтримка</li>
+              <li>Перевірка резюме</li>
+              <li>Доступ до діагностики та аналітики <strong>ШІ</strong> помічника</li>
+            </ul>
+            <button className="btn btn-primary">Оновити до VIP</button>
+          </div>
+          <div className={styles.plan}>
+            <h2 className={styles.planName}>Корпоративний</h2>
+            <p className={styles.planPrice}>Індивідуально</p>
+            <ul className={styles.planFeatures}>
+              <li>Усі функції Профі плану</li>
+              <li>Індивідуальні рішення</li>
+              <li>Персоналізований пошук</li>
+              <li>Виділений менеджер акаунтів</li>
+              <li>Доступ до API</li>
+            </ul>
+            <button className="btn btn-primary">Зв'язатися з відділом продажу</button>
+          </div>  
+          </div>
+
       </div>
     </Layout>
   );
 }
+
 

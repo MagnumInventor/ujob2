@@ -30,9 +30,21 @@
   border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 2rem;
-  width: 300px;
+  width: 400px;
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2 {
+  padding: 1px;
+}
+
+.forworker {
+  padding-bottom: 10px;
+}
+.forcompany {
+  padding-top: 120px;
+  padding-bottom: 3px;
 }
 
 .plan:hover {
