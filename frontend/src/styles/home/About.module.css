@@ -67,12 +67,12 @@
 
 .hero h1 {
   font-size: 3rem;
-  color: #333;
+  color: #d0f8ff;
 }
 
 .hero p {
   font-size: 1.5rem;
-  color: #666;
+  color: #2295c2;
 }
 
 section {
@@ -81,7 +81,7 @@ section {
 
 h2 {
   font-size: 2rem;
-  color: #333;
+  color: #87e3ff;
   margin-bottom: 1.5rem;
 }
 

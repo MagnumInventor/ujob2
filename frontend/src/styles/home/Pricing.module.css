@@ -1,6 +1,8 @@
 .pricing {
   text-align: center;
   padding: 2rem 0;
+  
+  min-width: 70%;
 }
 
 .title {

@@ -18,6 +18,7 @@ import DonationAppeal from './components/landing/DonationAppeal'
 import AdditionalInfo from './components/landing/AdditionalInfo'
 
 import './styles/globals.css';
+import "./App.css"
 
 const App = () => {
     const [data, setData] = useState(null);

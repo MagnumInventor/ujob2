@@ -6,69 +6,70 @@ import styles from '../../styles/home/About.module.css';
 const About = () => {
   return (
     <Layout>
-      <div className="about-us">
-        <section className="hero">
-          <h1>About Ujob</h1>
-          <p>Connecting talent with opportunity in Ukraine</p>
+      <div className={styles["about-us"]}>
+        <section className={styles.hero}>
+          <h1>Про нас</h1>
+          <p>З'єднуємо таланти з можливостями в Україні</p>
         </section>
 
-        <section className="mission">
-          <h2>Our Mission</h2>
+        <section className={styles.mission}>
+          <h2>Наша місія</h2>
           <p>
-            At Ujob, we're dedicated to revolutionizing the job market in Ukraine by creating a platform that seamlessly
-            connects talented individuals with innovative companies. Our mission is to foster economic growth, reduce
-            unemployment, and contribute to the development of a thriving, skilled workforce across the country.
+            У Ujob ми прагнемо революціонізувати ринок праці в Україні, створюючи платформу, яка безперешкодно
+            з'єднує талановитих людей з інноваційними компаніями. Наша місія — сприяти економічному зростанню, зменшити
+            рівень безробіття та сприяти розвитку кваліфікованої робочої сили по всій країні.
           </p>
         </section>
 
-        <section className="values">
-          <h2>Our Values</h2>
-          <div className="values-grid">
-            <div className="value-item">
-              <h3>Innovation</h3>
-              <p>We constantly strive to improve our platform and services, embracing new technologies and ideas.</p>
+        <section className={styles.values}>
+          <h2>Наші цінності</h2>
+          <div className={styles["values-grid"]}>
+            <div className={styles["value-item"]}>
+              <h3>Інновації</h3>
+              <p>Ми постійно прагнемо покращувати нашу платформу та сервіси, приймаючи нові технології та ідеї.</p>
             </div>
-            <div className="value-item">
-              <h3>Integrity</h3>
-              <p>We believe in transparency, honesty, and ethical practices in all our operations.</p>
+            <div className={styles["value-item"]}>
+              <h3>Цілісність</h3>
+              <p>Ми віримо в прозорість, чесність і етичні практики у всіх наших операціях.</p>
             </div>
-            <div className="value-item">
-              <h3>Inclusivity</h3>
-              <p>We're committed to creating equal opportunities for all, regardless of background or experience.</p>
+            <div className={styles["value-item"]}>
+              <h3>Інклюзивність</h3>
+              <p>Ми прагнемо створити рівні можливості для всіх, незалежно від фону чи досвіду.</p>
             </div>
-            <div className="value-item">
-              <h3>Empowerment</h3>
-              <p>We aim to empower both job seekers and employers, providing them with the tools they need to succeed.</p>
+            <div className={styles["value-item"]}>
+              <h3>Підтримка</h3>
+              <p>Ми маємо на меті надати можливості як для шукачів роботи, так і для роботодавців, забезпечуючи їх
+                інструментами для успіху.</p>
             </div>
           </div>
         </section>
 
-        <section className="team">
-          <h2>Our Team</h2>
-          <div className="team-grid">
-            <div className="team-member">
-              <img src="" alt="Team Member 1" />
+        <section className={styles.team}>
+          <h2>Наша команда</h2>
+          <div className={styles["team-grid"]}>
+            <div className={styles["team-member"]}>
+              <img src="" alt="Член команди 1" />
               <h3>Олександр Маркович</h3>
-              <p>Founder & CEO</p>
+              <p>Засновник та CEO</p>
             </div>
-            <div className="team-member">
-              <img src="" alt="Team Member 2" />
+            <div className={styles["team-member"]}>
+              <img src="" alt="Член команди 2" />
               <h3>Катерина Шпак</h3>
               <p>CTO</p>
             </div>
-            <div className="team-member">
-              <img src="" alt="Team Member 3" />
+            <div className={styles["team-member"]}>
+              <img src="" alt="Член команди 3" />
               <h3>Марко Іванович</h3>
-              <p>Head of Operations</p>
+              <p>Керівник відділу операцій</p>
             </div>
           </div>
         </section>
 
-        <section className="instagram">
-          <h2>Follow Us on Instagram</h2>
-          <p>Stay updated with our latest news, events, and success stories!</p>
-          <div className="instagram-embed">
-            {/* Replace this with your actual Instagram embed code */}
+        <section className={styles.instagram}>
+          <h2>Слідкуйте за нами в Instagram</h2>
+          <p>Будьте в курсі наших новин, подій та історій успіху!</p>
+          <div className={styles["instagram-embed"]}>
+            {/* Замініть на реальний код вбудовування Instagram */}
             <iframe
               src="https://www.instagram.com/ujob/embed"
               width="320"
@@ -80,38 +81,38 @@ const About = () => {
           </div>
         </section>
 
-        <section className="company-photos">
-          <h2>Life at Ujob</h2>
-          <div className="photo-grid">
-            <img src="" alt="Company Photo 1" />
-            <img src="" alt="Company Photo 2" />
-            <img src="" alt="Company Photo 3" />
-            <img src="" alt="Company Photo 4" />
+        <section className={styles["company-photos"]}>
+          <h2>Життя в Ujob</h2>
+          <div className={styles["photo-grid"]}>
+            <img src="" alt="Фото компанії 1" />
+            <img src="" alt="Фото компанії 2" />
+            <img src="" alt="Фото компанії 3" />
+            <img src="" alt="Фото компанії 4" />
           </div>
         </section>
 
-        <section className="development">
-          <h2>Our Journey</h2>
-          <div className="timeline">
-            <div className="timeline-item">
+        <section className={styles.development}>
+          <h2>Наш шлях</h2>
+          <div className={styles.timeline}>
+            <div className={styles["timeline-item"]}>
               <h3>2020</h3>
-              <p>Ujob was founded with a vision to transform Ukraine's job market</p>
+              <p>Ujob був заснований з метою трансформації ринку праці в Україні</p>
             </div>
-            <div className="timeline-item">
+            <div className={styles["timeline-item"]}>
               <h3>2021</h3>
-              <p>Launched our first version of the platform, connecting 100+ companies with talented individuals</p>
+              <p>Запущена перша версія платформи, з'єднавши 100+ компаній з талановитими людьми</p>
             </div>
-            <div className="timeline-item">
+            <div className={styles["timeline-item"]}>
               <h3>2022</h3>
-              <p>Expanded our services to include skills assessment and training programs</p>
+              <p>Розширили наші послуги, включивши оцінку навичок та програми навчання</p>
             </div>
-            <div className="timeline-item">
+            <div className={styles["timeline-item"]}>
               <h3>2023</h3>
-              <p>Reached a milestone of 1000+ successful job placements</p>
+              <p>Досягли етапу з 1000+ успішних працевлаштувань</p>
             </div>
-            <div className="timeline-item">
+            <div className={styles["timeline-item"]}>
               <h3>2024</h3>
-              <p>Continuing to innovate and grow, with plans to expand across Eastern Europe</p>
+              <p>Продовжуємо інновувати та рости, з планами на розширення в Східній Європі</p>
             </div>
           </div>
         </section>
@@ -121,3 +122,4 @@ const About = () => {
 };
 
 export default About;
+

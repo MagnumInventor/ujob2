@@ -11,6 +11,7 @@ body {
     var(--background-mid),
     var(--background-end)
   );
+  min-width: 70%;
 }
 
 .background-gradient {
