@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "../styles/MobileProjectCatalogue.module.css";
+import styles from "../../../styles/user/worker/MobileProjectCatalogue.module.css";
 
 const MobileProjectCatalogue = () => {
   const [projects, setProjects] = useState([
@@ -58,6 +58,7 @@ const MobileProjectCatalogue = () => {
           <span></span>
         </button>
       </header>
+
       <div className={styles.projectsContainer} ref={containerRef}>
         {projects.map((project, index) => (
           <div key={index} className={styles.card}>
@@ -81,9 +82,10 @@ const MobileProjectCatalogue = () => {
               ))}
             </div>
             <button className={styles.applyButton}>Подати заявку</button>
-          </div>
-        ))}
+          </div>   ))}
       </div>
+
+
     </div>
   );
 };
