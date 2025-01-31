@@ -1,48 +1,59 @@
 // App.jsx
-
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/LandingPage";
-import About from "./pages/AboutUs";
-import Contact from "./pages/SupportUs";
-import axios from 'axios';
-
-import Header from './components/common/Header'
-import Footer from './components/common/Footer'
-
-import Hero from './components/landing/Hero'
-import ServiceImpact from './components/landing/ServiceImpact'
-import GetStarted from './components/landing/GetStarted'
-import FutureProspects from './components/landing/FutureProspects'
-import DonationAppeal from './components/landing/DonationAppeal'
-import AdditionalInfo from './components/landing/AdditionalInfo'
-
-import './styles/globals.css';
-import "./App.css"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MobileProjectCatalogue from "./MobileProjectCatalogue";
+import ProjectCatalogue from "./ProjectCatalogue";
+import Header from "./Header";
+import Footer from "./Footer";
+import Hero from "./Hero";
+import ServiceImpact from "./ServiceImpact";
+import GetStarted from "./GetStarted";
+import FutureProspects from "./FutureProspects";
+import DonationAppeal from "./DonationAppeal";
+import AdditionalInfo from "./AdditionalInfo";
 
 const App = () => {
-    const [data, setData] = useState(null);
+  const [data, setData] = useState(null);
+  const isMobile = window.innerWidth <= 768;
 
-    useEffect(() => {
-        axios.get('http://localhost:3000/api/data')
-            .then(response => setData(response.data))
-            .catch(error => console.error(error));
-    }, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/api/data")
+      .then((response) => setData(response.data))
+      .catch((error) => console.error(error));
+  }, []);
 
-    return (
+  return (
+    <Router>
       <div className="min-h-screen bg-gradient-to-b from-blue-900 to-blue-800 text-white">
-          <Header />
-          <main>
-            <Hero />
-            <ServiceImpact />
-            <GetStarted />
-            <FutureProspects />
-            <DonationAppeal />
-            <AdditionalInfo />
-          </main>
-          <Footer />
-        </div>
-      )
+        <Header />
+        <main>
+          <Routes>
+            <Route
+              path="/projects"
+              element={isMobile ? <MobileProjectCatalogue /> : <ProjectCatalogue />}
+            />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <ServiceImpact />
+                  <GetStarted />
+                  <FutureProspects />
+                  <DonationAppeal />
+                  <AdditionalInfo />
+                </>
+              }
+            />
+            {/* Додайте інші маршрути тут за необхідності */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 };
 
 export default App;
