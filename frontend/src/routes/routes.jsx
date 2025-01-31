@@ -12,6 +12,7 @@ import Enter from '../pages/сommon/Enter';
 
 // Worker pages:
 import Catalogue from '../pages/user/worker/Catalogue';
+import MobileCatalogue from '../pages/user/worker/MobileProjectCatalogue';
 
 export const routes = [
   {
@@ -47,9 +48,15 @@ export const routes = [
     element: <Enter />,
   },
 
+
+
   {
     path: '/catalogue',
     element: <Catalogue />,
   },
+  {
+    path: '/mobcatalogue',
+    element: <MobileCatalogue />,
+  }
 ];
 

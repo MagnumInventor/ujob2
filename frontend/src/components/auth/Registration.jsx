@@ -1,7 +1,8 @@
+// Registration.jsx
 'use client';
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../../styles/registration/registration.module.css';
 
 const initialFormState = {
@@ -18,6 +19,19 @@ const initialFormState = {
 
 export default function RegistrationForm() {
   const [formData, setFormData] = useState(initialFormState);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -164,9 +178,13 @@ export default function RegistrationForm() {
         )}
 
         <button type="submit" className={styles.submitButton}>Зареєструватися</button>
-        <Link className={styles.enterButton} to="/catalogue">Увійти</Link>
+        <Link
+          className={styles.enterButton}
+          to={isMobile ? "/mobcatalogue" : "/catalogue"}
+        >
+          Увійти
+        </Link>
       </form>
     </div>
   );
 }
-
