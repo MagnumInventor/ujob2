@@ -1,8 +1,9 @@
+/*registration.module.css*/
 .formContainer {
-  max-width: 500px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 4rem 2rem; /* Updated padding */
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(5, 34, 77, 0.1);
   border-radius: 10px;
   backdrop-filter: blur(10px);
 }
