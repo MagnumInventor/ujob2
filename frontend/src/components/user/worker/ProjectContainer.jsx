@@ -33,7 +33,9 @@ const ProjectCatalogue = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+    >
       <div id="projects-container" className={styles.projectsContainer}>
         {projects.map((project, index) => (
           <div key={index} className={styles.card}>
