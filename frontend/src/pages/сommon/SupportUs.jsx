@@ -7,24 +7,24 @@ export default function SupportUs() {
   return (
     <Layout>
       <div className={styles.supportUs}>
-        <h1 className={styles.title}>Support Our Mission</h1>
+        <h1 className={styles.title}>Підтримайте Нашу Місію</h1>
         <p className={styles.description}>
-          Your support helps us connect more talent with opportunities and empower the next generation of innovators.
+          Ваша підтримка допомагає нам поєднувати таланти з можливостями та надихати нове покоління інноваторів.
         </p>
         <div className={styles.supportOptions}>
           <div className={styles.supportCard}>
-            <h2>One-Time Donation</h2>
-            <p>Make a one-time contribution to support our cause.</p>
-            <button className={styles.donateButton}>Donate Now</button>
+            <h2>Одноразовий Внесок</h2>
+            <p>Зробіть одноразовий внесок, щоб підтримати нашу справу.</p>
+            <button className={styles.donateButton}>Підтримати</button>
           </div>
           <div className={styles.supportCard}>
-            <h2>Monthly Support</h2>
-            <p>Become a recurring supporter to help us plan for the future.</p>
-            <button className={styles.donateButton}>Become a Supporter</button>
+            <h2>Щомісячна Підтримка</h2>
+            <p>Станьте регулярним донором, щоб допомогти нам планувати майбутнє.</p>
+            <button className={styles.donateButton}>Стати Партнером</button>
           </div>
         </div>
         <div className={styles.monobankEmbed}>
-          <h2>Quick Donation via Monobank</h2>
+          <h2>Швидка Пожертва через Monobank</h2>
           <iframe
             src="https://send.monobank.ua/jar/2Xq9eMkJSo"
             width="320"
@@ -37,5 +37,4 @@ export default function SupportUs() {
       </div>
     </Layout>
   );
-}
-
+}  

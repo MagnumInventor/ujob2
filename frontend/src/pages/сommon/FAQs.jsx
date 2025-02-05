@@ -4,26 +4,27 @@ import React, { useState } from 'react';
 
 const faqs = [
   {
-    question: "What is Ujob?",
+    question: "Що таке Ujob?",
     answer:
-      "Ujob is a platform that connects talented individuals with job opportunities, focusing on empowering the next generation of innovators and businesses.",
+      "Ujob — це платформа, яка з'єднує талановитих людей з можливостями працевлаштування, зосереджуючись на підтримці нового покоління інноваторів і бізнесів.",
   },
   {
-    question: "How do I create an account?",
+    question: "Як створити обліковий запис?",
     answer:
-      "To create an account, click on the 'Register' button in the top right corner of the page. You can choose to register as an individual looking for work or as a company looking to hire.",
+      "Щоб створити обліковий запис, натисніть кнопку 'Зареєструватися' у верхньому правому куті сторінки. Ви можете обрати реєстрацію як фізична особа, яка шукає роботу, або як компанія, яка шукає працівників.",
   },
   {
-    question: "Is Ujob free to use?",
+    question: "Чи безкоштовний Ujob?",
     answer:
-      "Ujob offers both free and premium services. Basic job searching and posting is free, while advanced features may require a subscription. Check our Pricing page for more details.",
+      "Ujob пропонує як безкоштовні, так і преміум послуги. Базовий пошук вакансій і розміщення оголошень безкоштовні, тоді як розширені функції можуть вимагати підписки. Деталі дивіться на сторінці 'Ціни'.",
   },
   {
-    question: "How can I support Ujob?",
+    question: "Як я можу підтримати Ujob?",
     answer:
-      "You can support Ujob by using our platform, spreading the word, or making a donation. Visit our 'Support Us' page to learn more about how you can contribute to our mission.",
+      "Ви можете підтримати Ujob, використовуючи нашу платформу, поширюючи інформацію про нас або зробивши пожертву. Відвідайте сторінку 'Підтримати нас', щоб дізнатися більше про те, як ви можете сприяти нашій місії.",
   },
 ];
+
 
 export default function FAQs() {
   const [openIndex, setOpenIndex] = useState(null);

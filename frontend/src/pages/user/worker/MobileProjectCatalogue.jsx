@@ -4,24 +4,25 @@ import styles from "../../../styles/user/worker/MobileProjectCatalogue.module.cs
 const MobileProjectCatalogue = () => {
   const [projects, setProjects] = useState([
     {
-      name: "Project 1",
-      description: "This is a description for Project 1",
-      vacancies: ["Developer", "Designer", "Project Manager"],
+      name: "Проєкт 1",
+      description: "Це опис для Проєкту 1",
+      vacancies: ["Розробник", "Дизайнер", "Проєктний Менеджер"],
       team: [
-        { name: "John Doe", image: "/path/to/john.jpg" },
-        { name: "Jane Smith", image: "/path/to/jane.jpg" },
+        { name: "Іван Довгий", image: "/path/to/john.jpg" },
+        { name: "Анна Черненко", image: "/path/to/jane.jpg" },
       ],
     },
     {
-      name: "Project 2",
-      description: "This is a description for Project 2",
-      vacancies: ["Marketing Specialist", "Content Writer"],
+      name: "Проєкт 2",
+      description: "Це опис для Проєкту 2",
+      vacancies: ["Спеціаліст з маркетингу", "Копірайтер"],
       team: [
-        { name: "Alice Johnson", image: "/path/to/alice.jpg" },
-        { name: "Bob Williams", image: "/path/to/bob.jpg" },
+        { name: "Аліса Джонсон", image: "/path/to/alice.jpg" },
+        { name: "Боб Вільямс", image: "/path/to/bob.jpg" },
       ],
     },
   ]);
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);

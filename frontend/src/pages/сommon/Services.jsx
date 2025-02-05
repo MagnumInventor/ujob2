@@ -8,37 +8,37 @@ export default function Services() {
   return (
     <Layout>
       <div className={styles.services}>
-        <h1 className={styles.title}>Our Services</h1>
+        <h1 className={styles.title}>Наші Послуги</h1>
         <p className={styles.description}>
-          We offer a range of services to help connect talent with opportunities and empower businesses to find the right people.
+          Ми пропонуємо широкий спектр послуг, які допомагають поєднувати таланти з можливостями та дають бізнесу змогу знаходити потрібних людей.
         </p>
         <div className={styles.servicesList}>
           <div className={styles.serviceItem}>
             <Briefcase className={styles.serviceIcon} />
-            <h2 className={styles.serviceName}>Job Matching</h2>
+            <h2 className={styles.serviceName}>Підбір Вакансій</h2>
             <p className={styles.serviceDescription}>
-              Our AI-powered algorithm matches job seekers with the most suitable job opportunities based on their skills, experience, and preferences.
+              Наш алгоритм на основі штучного інтелекту підбирає для шукачів роботи найкращі вакансії відповідно до їхніх навичок, досвіду та уподобань.
             </p>
           </div>
           <div className={styles.serviceItem}>
             <Users className={styles.serviceIcon} />
-            <h2 className={styles.serviceName}>Talent Acquisition</h2>
+            <h2 className={styles.serviceName}>Залучення Талантів</h2>
             <p className={styles.serviceDescription}>
-              We help businesses find and attract top talent through our extensive network and advanced recruiting tools.
+              Ми допомагаємо бізнесу знаходити та залучати найкращі таланти через нашу широку мережу та передові інструменти рекрутингу.
             </p>
           </div>
           <div className={styles.serviceItem}>
             <Rocket className={styles.serviceIcon} />
-            <h2 className={styles.serviceName}>Career Development</h2>
+            <h2 className={styles.serviceName}>Кар'єрний Розвиток</h2>
             <p className={styles.serviceDescription}>
-              Access resources, workshops, and mentorship programs to boost your career growth and professional development.
+              Отримуйте доступ до ресурсів, майстер-класів та програм наставництва, щоб прискорити свій професійний розвиток.
             </p>
           </div>
           <div className={styles.serviceItem}>
             <Book className={styles.serviceIcon} />
-            <h2 className={styles.serviceName}>Skills Training</h2>
+            <h2 className={styles.serviceName}>Навчання Навичок</h2>
             <p className={styles.serviceDescription}>
-              Enhance your skillset with our curated online courses and training programs tailored to industry demands.
+              Покращуйте свої навички за допомогою наших онлайн-курсів та навчальних програм, створених з урахуванням потреб індустрії.
             </p>
           </div>
         </div>
