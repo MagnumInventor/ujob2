@@ -6,10 +6,10 @@
   padding-bottom: 1rem;
   font-size: 1.2rem;
   font-family: 'Montserrat';
+  background: transparent;
 }
 
 .card {
-  background-color: transparent;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
