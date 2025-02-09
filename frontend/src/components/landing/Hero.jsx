@@ -5,7 +5,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.content}>
         <h1 className={styles.headline}>
-          <span className="text-gradient">Поєднуємо талант</span> з можливостями
+          Поєднуємо <span className="text-gradient">талант</span> з <span className="text-gradient">можливостями</span>
         </h1>
         <h2 className={styles.subheadline}>ujob.com</h2>
         <p className="paragraph">Розширення можливостей нового покоління інноваторів і компаній</p>

@@ -18,7 +18,7 @@ export default function GetStarted() {
         <div className={`${styles.column} volumetric`}>
           <h3>"Хочу створити стартап" (В розробці)</h3>
           <p className="paragraph">Запустіть власну справу за допомогою Ujob</p>
-          <a href="https://stackoverflow.com" className="btn btn-outline" aria-disabled="true">В процесі</a>
+          <a href="https://stackoverflow.com" className="btn btn-outline" aria-disabled="true">Створити</a>
         </div>
       </div>
     </section>

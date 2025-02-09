@@ -4,7 +4,7 @@ export default function AdditionalInfo() {
   return (
     <section className={styles.info}>
       <h2>Більше про розвиток Ujob</h2>
-      <p>Stay tuned for more information about our mission, team, and impact.</p>
+      <p>Слідкуйте за оновленнями, щоб дізнатися більше про нашу місію, команду та вплив, який ми створюємо.</p>
     </section>
   )
 }
