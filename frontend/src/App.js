@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { routes } from "./routes/routes"
 import "./styles/globals.css"
-import "./styles/LoadingScreen.css"
+import "./styles/common/LoadingScreen.css"
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -15,15 +15,15 @@ function App() {
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 3000)
 
     const dotTimer = setInterval(() => {
       setDotCount((prevCount) => (prevCount + 1) % 4)
-    }, 250)
+    }, 1250)
 
     const statusTimer = setTimeout(() => {
       setStatusText("Started")
-    }, 1750)
+    }, 2750)
 
     // Generate particles
     const newParticles = Array.from({ length: 20 }, (_, i) => ({

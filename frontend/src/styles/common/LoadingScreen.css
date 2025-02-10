@@ -10,7 +10,7 @@
 
 .loading-screen {
   text-align: center;
-  color: #00ff00;
+  color: #ffffff;
   font-family: "Press Start 2P", cursive;
 }
 
@@ -196,7 +196,7 @@
   position: absolute;
   width: 5px;
   height: 5px;
-  background-color: #00ff00;
+  background-color: #00a2ff;
   border-radius: 50%;
   animation: float 3s infinite ease-in-out;
 }
