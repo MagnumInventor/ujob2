@@ -1,291 +1,294 @@
 /* global.css */
 
-
+@import url("../utils/fonts/orbitron-master/webfonts/fonts.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* Фон з градієнтом для загального фону */
 
-
 body {
-	background: linear-gradient(135deg,
+  background: linear-gradient(
+    135deg,
     var(--background-start),
     var(--background-mid),
     var(--background-end)
   );
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .background-gradient {
-	background: linear-gradient(135deg,
+  background: linear-gradient(
+    135deg,
     var(--background-start),
     var(--background-mid),
     var(--background-end)
   );
-	background-size: 400% 400%;
-	animation: gradientAnimation 10s ease infinite;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
 }
-
-
-
-
 
 /* Анімація зміни градієнту */
 
-
 @keyframes gradientAnimation {
-	0% {
+  0% {
     background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
-
-50% {
-	background-position: 100% 50%;
-}
-
-100% {
-	background-position: 0% 50%;
-}
-}
-
-
-
-
-  
 
 /* V0 */
 
+:root {
+  --background-start: 14, 6, 20;
+  --background-mid: 26, 37, 55;
+  --background-end: 66, 102, 139;
+  --foreground: #e5ecf6;
+  --primary: #ff6b00;
+  --primary-hover: #ff8c00;
+  --secondary: #7297bd;
+  --accent: #a78bfa;
+  --text-gradient: linear-gradient(to right, #157abd, #3532ce);
+  --card-background: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.2);
 
-
-  :root {
-	--background-start: 14, 6, 20;
-	--background-mid: 26, 37, 55;
-	--background-end: 66, 102, 139;
-	--foreground: #e5ecf6;
-	--primary: #ff6b00;
-	--primary-hover: #ff8c00;
-	--secondary: #7297bd;
-	--accent: #a78bfa;
-	--text-gradient: linear-gradient(to right, #157abd, #3532ce);
-	--card-background: rgba(255, 255, 255, 0.1);
-	--card-border: rgba(255, 255, 255, 0.2);
-
-	--button-font: 20px;
+  --button-font: 20px;
 }
 
 body {
-	color: var(--foreground);
-	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-      "Helvetica Neue", sans-serif;
-	line-height: 1.6;
-	font-size: 16px;
-	margin: 0;
-	padding: 0;
+  color: var(--foreground);
+  /*font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;*/
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 @layer utilities {
-	.bg-background {
-		background: linear-gradient(135deg,
-        rgb(var(--background-start)),
-        rgb(var(--background-mid)),
-        rgb(var(--background-end))
-      );
-	}
+  .bg-background {
+    background: linear-gradient(
+      135deg,
+      rgb(var(--background-start)),
+      rgb(var(--background-mid)),
+      rgb(var(--background-end))
+    );
+  }
 }
 
-									.from-blue-900 {
-	/*BACKGROUND TYPE*/					--tw-gradient-from: var(--background-start);
-										}
+.from-blue-900 {
+  /*BACKGROUND TYPE*/
+  --tw-gradient-from: var(--background-start);
+}
 
 .text-gradient {
-	background: var(--text-gradient);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .glow {
-	text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 .volumetric {
-	position: relative;
-	overflow: hidden;
-	border-radius: 0.5rem;
-	background: linear-gradient(to bottom right, var(--card-background), rgba(255, 255, 255, 0.05));
-	border: 1px solid var(--card-border);
-	backdrop-filter: blur(10px);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--card-background),
+    rgba(255, 255, 255, 0.05)
+  );
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .volumetric:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
-	display: inline-block;
-	padding: 0.75rem 1.5rem;
-	border-radius: 9999px;
-	font-weight: 600;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	cursor: pointer;
-	font-size: 1.25rem;
-	font-family: 'Montserrat';
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-family: "Montserrat";
 }
 
 .btn-primary {
-	background-color: var(--primary);
-	color: white;
+  background-color: var(--primary);
+  color: white;
 }
 
 .btn-primary:hover {
-	background-color: var(--primary-hover);
-	transform: translateY(-2px);
-	box-shadow: 0 4px 6px rgba(255, 107, 0, 0.2);
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(255, 107, 0, 0.2);
 }
 
 .btn-outline {
-	background-color: var(--primary);
-	color: var(--foreground);
-	border: 2px solid var(--foreground);
+  background-color: var(--primary);
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
 }
 
 .btn-outline:hover {
-	background-color: var(--foreground);
-	color: var(--background-start);
+  background-color: var(--foreground);
+  color: var(--background-start);
 }
 
 h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-	font-weight: 700;
-	line-height: 1.2;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .container {
-	max-width: 90%;
+  max-width: 90%;
   max-width: 70%;
-	margin: 0 auto;
-	padding: 0 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
-	body {
-		font-size: 14px;
-	}
+  body {
+    font-size: 14px;
+  }
   .container {
     max-width: 100%;
   }
 
-	.btn {
-		padding: 0.5rem 1rem;
-		font-size: 0.875rem;
-	}
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
 }
 
 @keyframes gradientAnimation {
-	0% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
 
-	50% {
-		background-position: 100% 50%;
-	}
+  50% {
+    background-position: 100% 50%;
+  }
 
-	100% {
-		background-position: 0% 50%;
-	}
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .background-gradient {
-	background: linear-gradient(135deg, #0e0614, #182737, #27527d, #3c6095, #4d88b2);
-	background-size: 400% 400%;
-	animation: gradientAnimation 10s ease infinite;
+  background: linear-gradient(
+    135deg,
+    #0e0614,
+    #182737,
+    #27527d,
+    #3c6095,
+    #4d88b2
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
 }
 
 :root {
-	--background-start: 14 6 20;
-	--background-end: 66 102 139;
-	--foreground: 210 40% 98%;
+  --background-start: 14 6 20;
+  --background-end: 66 102 139;
+  --foreground: 210 40% 98%;
 }
 
 body {
-	color: rgb(var(--foreground));
-	background: linear-gradient(135deg, 
+  color: rgb(var(--foreground));
+  background: linear-gradient(
+    135deg,
     rgb(var(--background-start)),
     rgb(24, 39, 55),
     rgb(39, 82, 125),
     rgb(67, 102, 139),
     rgb(var(--background-end))
   );
-	min-height: 100vh;
+  min-height: 100vh;
 }
 
 @layer utilities {
-	.text-foreground {
-		color: rgb(var(--foreground));
-	}
+  .text-foreground {
+    color: rgb(var(--foreground));
+  }
 
-	.bg-background {
-		background: linear-gradient(135deg, 
+  .bg-background {
+    background: linear-gradient(
+      135deg,
       rgb(var(--background-start)),
       rgb(24, 39, 55),
       rgb(39, 82, 125),
       rgb(67, 102, 139),
       rgb(var(--background-end))
     );
-	}
+  }
 }
 
 .text-gradient {
-	@apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-500;
 }
 
 .glow {
-	text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px #73c2fb, 0 0 30px #73c2fb;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px #73c2fb,
+    0 0 30px #73c2fb;
 }
 
 .volumetric {
-	@apply relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 to-blue-700 p-1;
+  @apply relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 to-blue-700 p-1;
 }
 
 .volumetric::before {
-	content: '';
-	@apply absolute inset-0 bg-gradient-to-br from-blue-400 to-teal-600 opacity-30 blur-xl;
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-br from-blue-400 to-teal-600 opacity-30 blur-xl;
   z-index: -1;
 }
 
 .paragraph {
-	@apply text-gray-300 leading-relaxed mb-4;
+  @apply text-gray-300 leading-relaxed mb-4;
 }
 
 .glow {
-	text-shadow: 0 0 10px #ffffff, 0 0 20px #5eb3e4, 0 0 30px #5eb3e4;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #5eb3e4, 0 0 30px #5eb3e4;
 }
 
 .btn-primary {
-	color: #ffffff;
-	text-align: center;
-	text-decoration: none;
-	transition: background-color 0.3s ease;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .nav a {
-	transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .menu-toggle span {
-	transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .menu-toggle:hover span {
-	transform: scaleX(1.2);
+  transform: scaleX(1.2);
 }

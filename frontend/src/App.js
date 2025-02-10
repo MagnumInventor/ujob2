@@ -19,7 +19,7 @@ function App() {
 
     const dotTimer = setInterval(() => {
       setDotCount((prevCount) => (prevCount + 1) % 4)
-    }, 1250)
+    }, 250)
 
     const statusTimer = setTimeout(() => {
       setStatusText("Started")

@@ -1,3 +1,5 @@
+@import url("../../utils/fonts/orbitron-master/webfonts/fonts.css");
+
 header {
   display: flex;
   justify-content: space-between;
@@ -29,6 +31,7 @@ header {
   margin-top: 15px;
 
   font-weight: bold;
+  font-family: "Orbitron";
   animation: blink 1s infinite;
   text-decoration: none;
 }
@@ -125,10 +128,3 @@ header {
     transform: rotate(-45deg);
   }
 }
-
-
-
-
-
-
-
