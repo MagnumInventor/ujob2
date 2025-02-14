@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { FaEdit, FaPlus, FaTrash } from "react-icons/fa"
-import "../styles/UserProfile.css"
+import "../../../styles/user/worker/UserProfile.css"
 
 const UserProfile = () => {
   const [userInfo, setUserInfo] = useState({

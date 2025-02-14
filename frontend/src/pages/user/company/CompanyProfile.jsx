@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { FaEdit, FaPlus, FaTrash } from "react-icons/fa"
-import "../styles/CompanyProfile.css"
+import "../../../styles/user/company/CompanyProfile.css"
 
 const CompanyProfile = () => {
   const [companyInfo, setCompanyInfo] = useState({

@@ -13,8 +13,16 @@ import Enter from '../pages/сommon/Enter';
 // Worker pages:
 import Catalogue from '../pages/user/worker/Catalogue';
 import MobileCatalogue from '../pages/user/worker/MobileProjectCatalogue';
+import WorkerProfile from '../pages/user/worker/UserProfile'
+
+// Company pages:
+import CompanyProfile from '../pages/user/company/CompanyProfile'
+
 
 export const routes = [
+
+      // JOINT INTERFACE 
+
   {
     path: '/',
     element: <Home />,
@@ -48,8 +56,9 @@ export const routes = [
     element: <Enter />,
   },
 
+        // USER INTEFACE
 
-
+    // WORKER IN.
   {
     path: '/catalogue',
     element: <Catalogue />,
@@ -57,6 +66,20 @@ export const routes = [
   {
     path: '/mobcatalogue',
     element: <MobileCatalogue />,
-  }
-];
+  },
+  {
+    path: '/workerprofile',
+    element: <WorkerProfile />,
+  },
 
+
+    // COMPANY IN.
+
+    {
+      path: '/companyprofile',
+      element: <CompanyProfile />,
+    }
+
+
+
+];
