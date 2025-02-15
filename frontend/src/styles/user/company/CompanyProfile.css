@@ -7,7 +7,8 @@
 }
 
 .company-profile section {
-  background-color: #f8f9fa;
+  background-color: rgba(255, 255, 255, 0.3); /* Трохи світліший за фон */
+
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -15,12 +16,12 @@
 }
 
 .company-profile h1 {
-  color: #333;
+  color: #e2ebee;
   margin-bottom: 10px;
 }
 
 .company-profile h2 {
-  color: #555;
+  color: #b7d1e0;
   margin-bottom: 15px;
 }
 
@@ -70,7 +71,7 @@
 
 .vacancies li,
 .requirements li {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 10px;
   border-radius: 4px;
   margin-bottom: 10px;
