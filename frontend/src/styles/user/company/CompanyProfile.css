@@ -18,20 +18,27 @@
 .company-profile h1 {
   color: #e2ebee;
   margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 3.4rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .company-profile h2 {
   color: #b7d1e0;
   margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .company-profile ul {
   list-style-type: none;
   padding: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-family: "Montserrat";
 }
 
 .company-profile li {
   margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .edit-button,
