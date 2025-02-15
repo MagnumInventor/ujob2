@@ -154,12 +154,15 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
   font-weight: 700;
+  line-height: 1.2;
+}
+h2 {
+  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -248,7 +251,7 @@ body {
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-100 to-teal-300;
 }
 
 .glow {

@@ -5,7 +5,7 @@
 
 .title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 1300;
   margin-bottom: 2rem;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
@@ -49,4 +49,3 @@
   padding: 1rem 0;
   color: #a0aec0;
 }
-
