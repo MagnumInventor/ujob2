@@ -180,7 +180,7 @@ export default function RegistrationForm() {
         <button type="submit" className={styles.submitButton}>Зареєструватися</button>
         <Link
           className={styles.enterButton}
-          to={isMobile ? "/mobcatalogue" : "/catalogue"}
+          to={isMobile ? "/mobcatalogue" : "/companyprofile"}
         >
           Увійти
         </Link>
