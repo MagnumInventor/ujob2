@@ -133,6 +133,7 @@ body {
 
 .btn-primary {
   background-color: var(--primary);
+  font-family: "Orbitron", "Montserrat";
   color: white;
 }
 
