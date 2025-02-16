@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from '../../styles/registration/registration.module.css';
 import Form from '../../components/auth/Registration';
-import Layout from '../../components/Layout';
+import Layout from '../../components/SmallLayoutLayout';
 
 function SafeComponent({ Component }) {
   try {
