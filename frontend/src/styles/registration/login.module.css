@@ -5,8 +5,9 @@
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 0.4em;
-  background-color: #171717;
+  background-color: #00000046;
   border-radius: 25px;
+  box-shadow: 0 14px 10px rgba(0, 0, 0, 0.4);
   transition: 0.4s ease-in-out;
 }
 
@@ -40,6 +41,9 @@
   height: 1.3em;
   width: 1.3em;
   fill: white;
+}
+input {
+  background: transparent;
 }
 
 .input-field {
