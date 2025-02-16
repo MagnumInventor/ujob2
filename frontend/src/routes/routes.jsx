@@ -7,7 +7,9 @@ import SupportUs from '../pages/сommon/SupportUs';
 import FAQs from '../pages/сommon/FAQs';
 import Pricing from '../pages/сommon/Pricing';
 
-import Enter from '../pages/сommon/Enter';
+  // Authefication
+import Enter from '../pages/auth/Enter';
+import Login from '../pages/auth/SingIn';
 
 
 // Worker pages:
@@ -54,6 +56,10 @@ export const routes = [
   {
     path: '/enter',
     element: <Enter />,
+  },
+  {
+    path: '/login',
+    element: <Login />,
   },
 
         // USER INTEFACE

@@ -34,7 +34,7 @@ export default function Header() {
         <Link to="/pricing">Pricing</Link>
       </nav>
       <div className={styles.actions}>
-        <Link to="/Enter" className="btn btn-primary">Get Started</Link>
+        <Link to="/login" className="btn btn-primary">Get Started</Link>
         <button className={styles.menuToggle} onClick={toggleMenu}>
           <span></span>
           <span></span>
