@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import Form from '../../components/auth/Login';
 
 function SafeComponent({ Component }) {
   try {
@@ -12,11 +12,9 @@ function SafeComponent({ Component }) {
 
 function Ent() {
   return (
-    <Layout>
-      <div className={styles.register}>
+      <div>
         <SafeComponent Component={Form} />
       </div>
-    </Layout>
   );
 }
 
