@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from '../../components/auth/Login';
-import Layout from '../../components/SmallLayoutLayout';
+import Layout from '../../components/SmallLayout';
 
 function SafeComponent({ Component }) {
   try {
