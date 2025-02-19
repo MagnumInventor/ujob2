@@ -260,9 +260,9 @@ body {
     0 0 30px #73c2fb;
 }
 
-.volumetric {
+/*.volumetric {
   @apply relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-800 to-blue-700 p-1;
-}
+}*/
 
 .volumetric::before {
   content: "";

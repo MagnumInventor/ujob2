@@ -27,11 +27,10 @@ export default function Header() {
         <Link to="/" className={`${styles.logoText} glow`}>Ujob</Link>
       </div>
       <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
-        <Link to="/about">About</Link>
-        <Link to="/services">Services</Link>
+        <Link to="/about">Про нас</Link>
+        <Link to="/services">Послуги</Link>
         <Link to="/faqs">FAQ's</Link>
-        <Link to="/support-us">Support Us</Link>
-        <Link to="/pricing">Pricing</Link>
+        <Link to="/support-us">Підтримка проєкту</Link>
       </nav>
       <div className={styles.actions}>
         <Link to="/login" className="btn btn-primary">Get Started</Link>
