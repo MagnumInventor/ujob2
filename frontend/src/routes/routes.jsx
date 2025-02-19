@@ -1,11 +1,15 @@
 // routes.jsx
 
+// Joint pages
 import Home from '../pages/сommon/LandingPage';
 import About from '../pages/сommon/AboutUs';
 import Services from '../pages/сommon/Services';
 import SupportUs from '../pages/сommon/SupportUs';
-import FAQs from '../pages/сommon/FAQs';
 import Pricing from '../pages/сommon/Pricing';
+import FAQs from '../pages/сommon/FAQs';
+import PolicyPrivacy from '../pages/сommon/Privacy&Policy';
+import TermsOfUse from '../pages/сommon/TermsOfUse';
+
 
   // Authefication
 import Enter from '../pages/auth/Enter';
@@ -19,6 +23,7 @@ import WorkerProfile from '../pages/user/worker/UserProfile'
 
 // Company pages:
 import CompanyProfile from '../pages/user/company/CompanyProfile'
+import PrivacyPolicy from '../pages/сommon/Privacy&Policy';
 
 
 export const routes = [
@@ -50,7 +55,18 @@ export const routes = [
     path: '/pricing',
     element: <Pricing />,
   },
-  
+
+
+
+  {
+    path: '/privacy',
+    element: <PrivacyPolicy />,
+  },
+  {
+    path: '/terms',
+    element: <TermsOfUse />,
+  },
+
 
 
   {

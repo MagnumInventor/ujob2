@@ -1,5 +1,36 @@
+.topSections {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section h3 {
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.section a {
+  color: var(--secondary);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.section a:hover {
+  color: var(--accent);
+}
+
 .footer {
-  padding-bottom: 50px;
+  padding: 0rem 0 2rem;
+  margin-top: 4rem;
 }
 
 .container {
@@ -11,22 +42,18 @@
 .content {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .logoSection {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .logo {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   color: var(--foreground);
-  font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .linksSection {
@@ -41,23 +68,20 @@
 }
 
 .linkColumn h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
   color: var(--foreground);
-  font-weight: bold;
 }
 
 .linkColumn a {
   color: var(--secondary);
   text-decoration: none;
-  margin-bottom: 0.8rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 0.2rem 0;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
 }
 
 .linkColumn a:hover {
   color: var(--accent);
-  transform: translateX(5px);
 }
 
 .bottomSection {
@@ -65,46 +89,50 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  border-top: 2px solid rgba(243, 254, 255, 0.2);
-  font-size: 1.1rem;
-  color: var(--foreground);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .socialLinks {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .socialLinks a {
   color: var(--foreground);
-  opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .socialLinks a:hover {
   opacity: 1;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .copyright {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--secondary);
 }
 
 @media (max-width: 768px) {
+  .topSections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    margin-bottom: 1.5rem;
+  }
+
   .content {
     flex-direction: column;
   }
 
   .logoSection {
     margin-bottom: 2rem;
-    text-align: center;
   }
 
   .linksSection {
     flex-direction: column;
-    align-items: center;
   }
 
   .linkColumn {
@@ -114,6 +142,5 @@
   .bottomSection {
     flex-direction: column-reverse;
     gap: 1rem;
-    text-align: center;
   }
 }
