@@ -14,22 +14,22 @@ export default function Pricing() {
         <div className={styles.pricingPlans}>
           <div className={styles.plan}>
             <h2 className={styles.planName}>Базовий</h2>
-            <p className={styles.planPrice}>$1</p>
+            <p className={styles.planPrice}>39 &#8372; U+20B4</p>
             <ul className={styles.planFeatures}>
               <li>Створення профілю</li>
               <li>Перегляд вакансій</li>
-              <li>Подання до 5 заявок на місяць</li>
+              <li>Подання до 15 заявок на місяць</li>
             </ul>
             <button className="btn btn-primary">Почати</button>
           </div>
           <div className={styles.plan}>
             <h2 className={styles.planName}>Профі</h2>
-            <p className={styles.planPrice}>$2.5/міцясь</p>
+            <p className={styles.planPrice}>&#8372;2.5/міцясь</p>
             <ul className={styles.planFeatures}>
-              <li>Створення профілю</li>
-              <li>Перегляд вакансій</li>
-              <li>Подання до 15 заявок на місяць</li>
-              <li>Доступ до <strong>ШІ</strong> помічника</li>
+              <li>Просування профілю</li>
+              <li>Персоналізований дизайн , вміст профілю</li>
+              <li>Подання до 50 заявок на місяць</li>
+              <li>Доступ до <strong>ШІ</strong> аналітики*</li>
             </ul>
             <button className="btn btn-primary">Оновити до профі</button>
           </div>
@@ -41,34 +41,35 @@ export default function Pricing() {
         <div className={styles.pricingPlans}>
           <div className={styles.plan}>
             <h2 className={styles.planName}>Базовий</h2>
-            <p className={styles.planPrice}>$1</p>
+            <p className={styles.planPrice}><strong>Безплатно</strong> 2 місяці дальше - &#8372;1/місяць</p>
             <ul className={styles.planFeatures}>
-              <li>Створення профілю</li>
-              <li>Перегляд вакансій</li>
-              <li>Подання до 5 заявок на місяць</li>
+              <li>Створення профілю компанії/організації</li>
+              <li>Перегляд заявок</li>
+              <li>Подання &gt5 вакансій/місяць</li>
             </ul>
             <button className="btn btn-primary">Почати</button>
           </div>
           <div className={styles.plan}>
             <h2 className={styles.planName}>Профі</h2>
-            <p className={styles.planPrice}>$4.99/міцясь</p>
+            <p className={styles.planPrice}>&#8372;452.99/міцясь</p>
             <ul className={styles.planFeatures}>
-              <li>Створення профілю</li>
-              <li>Перегляд вакансій</li>
-              <li>Подання до 15 заявок на місяць</li>
-              <li>Доступ до <strong>ШІ</strong> помічника</li>
+              <li>Просування вакансій</li>
+              <li>Подання &gt25 вакансій/місяць</li>
+              <li>Розширені методи комунікації з кандидатами</li>             
+              <li>Доступ до <strong>ШІ</strong> аналітика*</li>
             </ul>
             <button className="btn btn-primary">Оновити до профі</button>
           </div>
           <div className={styles.plan}>
             <h2 className={styles.planName}>Профі</h2>
-            <p className={styles.planPrice}>$14.99/місяць</p>
+            <p className={styles.planPrice}>&#8372;14.99/місяць</p>
             <ul className={styles.planFeatures}>
               <li>Усі функції Профі плану</li>
-              <li>Безлімітні заявки на вакансії</li>
+              <li>Персоналізований дизайн , вміст профілю</li>
+              <li>Безлімітне подання вакансій</li>
               <li>Пріоритетна підтримка</li>
-              <li>Перевірка резюме</li>
-              <li>Доступ до діагностики та аналітики <strong>ШІ</strong> помічника</li>
+              <li>Перевірка резюме ШІ</li>
+              <li>Додаткові функції<strong>ШІ</strong> помічника</li>
             </ul>
             <button className="btn btn-primary">Оновити до VIP</button>
           </div>
@@ -76,9 +77,9 @@ export default function Pricing() {
             <h2 className={styles.planName}>Корпоративний</h2>
             <p className={styles.planPrice}>Індивідуально</p>
             <ul className={styles.planFeatures}>
-              <li>Усі функції Профі плану</li>
+              <li>Усі функції VIP плану</li>
               <li>Індивідуальні рішення</li>
-              <li>Персоналізований пошук</li>
+              <li>Персоналізований пошук за межами платформи</li>
               <li>Виділений менеджер акаунтів</li>
               <li>Доступ до API</li>
             </ul>

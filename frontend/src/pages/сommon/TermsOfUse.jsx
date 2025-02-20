@@ -3,96 +3,95 @@ import styles from "../../styles/home/TermsOfUse.module.css"
 
 const TermsOfUse = () => {
   return (
-    <Layout>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Terms of Use</h1>
-        <p className={styles.lastUpdated}>Last updated: May 1, 2023</p>
+<Layout>
+  <div className={styles.container}>
+    <h1 className={styles.title}>Умови використання</h1>
+    <p className={styles.lastUpdated}>Останнє оновлення: 20 лютого 2025</p>
 
-        <section className={styles.section}>
-          <h2>1. Acceptance of Terms</h2>
-          <p>
-            By accessing or using Ujob's website and services, you agree to be bound by these Terms of Use. If you do
-            not agree to these terms, please do not use our services.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>1. Прийняття умов</h2>
+      <p>
+        Використовуючи вебсайт та сервіси Ujob, ви погоджуєтесь дотримуватись цих Умов використання. Якщо ви не згодні з цими умовами, будь ласка, не використовуйте наші послуги.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>2. Description of Service</h2>
-          <p>
-            Ujob provides an online platform connecting job seekers with employers. We do not guarantee employment or
-            hiring and are not responsible for the actions of users on our platform.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>2. Опис послуги</h2>
+      <p>
+        Ujob — це онлайн-платформа, яка з’єднує шукачів роботи, роботодавців, волонтерські та громадські організації. Ми не гарантуємо працевлаштування або наймання і не несемо відповідальності за дії користувачів на платформі.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>3. User Accounts</h2>
-          <p>
-            You are responsible for maintaining the confidentiality of your account information and for all activities
-            that occur under your account. You must immediately notify us of any unauthorized use of your account.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>3. Облікові записи користувачів</h2>
+      <p>
+        Ви несете відповідальність за збереження конфіденційності вашої інформації облікового запису та всі дії, що здійснюються від вашого імені. У разі несанкціонованого доступу до вашого облікового запису, негайно повідомте нас.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>4. User Conduct</h2>
-          <p>You agree not to:</p>
-          <ul>
-            <li>Use the service for any unlawful purpose</li>
-            <li>Post inaccurate, defamatory, or offensive content</li>
-            <li>Impersonate any person or entity</li>
-            <li>Interfere with or disrupt the service or servers</li>
-            <li>Attempt to gain unauthorized access to any part of the service</li>
-          </ul>
-        </section>
+    <section className={styles.section}>
+      <h2>4. Поведінка користувачів</h2>
+      <p>Ви зобов'язуєтесь не:</p>
+      <ul>
+        <li>Використовувати сервіс для незаконних цілей</li>
+        <li>Розміщувати неточну, наклепницьку чи образливу інформацію</li>
+        <li>Видавати себе за іншу особу чи організацію</li>
+        <li>Втручатися в роботу сервісу або серверів</li>
+        <li>Намагатися отримати несанкціонований доступ до будь-якої частини сервісу</li>
+      </ul>
+    </section>
 
-        <section className={styles.section}>
-          <h2>5. Intellectual Property</h2>
-          <p>
-            All content on Ujob, including text, graphics, logos, and software, is the property of Ujob or its content
-            suppliers and is protected by copyright laws.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>5. Інтелектуальна власність</h2>
+      <p>
+        Увесь контент платформи Ujob, включаючи текст, графіку, логотипи та програмне забезпечення, є власністю Ujob або його постачальників контенту та захищений законами про авторське право.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>6. Limitation of Liability</h2>
-          <p>
-            Ujob is not liable for any indirect, incidental, special, consequential, or punitive damages resulting from
-            your use of or inability to use the service.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>6. Використання ШІ</h2>
+      <p>
+        ШІ на платформі надає аналітичні послуги, такі як пошук відповідностей, аналіз вакансій і резюме. Дані, використані для аналітики, обмежуються профілем користувача та не передаються зовнішнім системам.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>7. Termination</h2>
-          <p>
-            We reserve the right to terminate or suspend your account and access to the service at our sole discretion,
-            without notice, for conduct that we believe violates these Terms of Use or is harmful to other users, us, or
-            third parties, or for any other reason.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>7. Обмеження відповідальності</h2>
+      <p>
+        Ujob не несе відповідальності за непрямі, випадкові, спеціальні, штрафні чи наслідкові збитки, пов’язані з використанням або неможливістю використання сервісу.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>8. Changes to Terms</h2>
-          <p>
-            We may modify these Terms of Use at any time. Your continued use of the service after any such changes
-            constitutes your acceptance of the new Terms of Use.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>8. Розірвання</h2>
+      <p>
+        Ми залишаємо за собою право припинити або призупинити ваш обліковий запис та доступ до сервісу за нашою виключною дискрецією, без попередження, якщо ваше використання порушує ці Умови використання або є шкідливим для інших користувачів, нас чи третіх сторін.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>9. Governing Law</h2>
-          <p>
-            These Terms of Use are governed by and construed in accordance with the laws of Ukraine, without regard to
-            its conflict of law principles.
-          </p>
-        </section>
+    <section className={styles.section}>
+      <h2>9. Зміни до умов</h2>
+      <p>
+        Ми можемо змінювати ці Умови використання в будь-який час. Ваше подальше використання сервісу після таких змін означає вашу згоду з новими умовами.
+      </p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>10. Contact Information</h2>
-          <p>If you have any questions about these Terms of Use, please contact us at:</p>
-          <p>Email: legal@ujob.com</p>
-          <p>Address: 123 Ujob Street, Kyiv, Ukraine 01001</p>
-        </section>
-      </div>
-    </Layout>
+    <section className={styles.section}>
+      <h2>10. Регулювання</h2>
+      <p>
+        Ці Умови використання регулюються та тлумачаться відповідно до законодавства України.
+      </p>
+    </section>
+
+    <section className={styles.section}>
+      <h2>11. Контактна інформація</h2>
+      <p>Якщо у вас є запитання щодо цих Умов використання, звертайтеся до нас:</p>
+      <p>Email: legal@ujob.com</p>
+      <p>Адреса: вул. Ujob, 123, Київ, Україна, 01001</p>
+    </section>
+  </div>
+</Layout>
+
   )
 }
 

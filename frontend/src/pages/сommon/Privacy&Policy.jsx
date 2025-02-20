@@ -4,71 +4,84 @@ import styles from '../../styles/home/PrivacyPolicy.module.css';
 
 const PrivacyPolicy = () => {
   return (
-    <Layout>
-      <div className={styles.container}>
-        <h1 className={styles.title}>Privacy Policy</h1>
-        <p className={styles.lastUpdated}>Last updated: May 1, 2023</p>
-        
-        <section className={styles.section}>
-          <h2>1. Introduction</h2>
-          <p>Welcome to Ujob. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website and services.</p>
-        </section>
+<Layout>
+  <div className={styles.container}>
+    <h1 className={styles.title}>Політика конфіденційності</h1>
+    <p className={styles.lastUpdated}>Останнє оновлення: 20 лютого 2025</p>
+    
+    <section className={styles.section}>
+      <h2>1. Вступ</h2>
+      <p>Ласкаво просимо на платформу Ujob. Ми зобов’язуємося захищати вашу особисту інформацію та ваше право на конфіденційність. Ця Політика конфіденційності пояснює, як ми збираємо, використовуємо, розкриваємо та захищаємо вашу інформацію під час використання нашого вебсайту та послуг.</p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>2. Information We Collect</h2>
-          <p>We collect personal information that you provide to us, such as:</p>
-          <ul>
-            <li>Name, email address, and contact information</li>
-            <li>Professional experience and educational background</li>
-            <li>Job preferences and career goals</li>
-            <li>Any other information you choose to provide</li>
-          </ul>
-        </section>
+    <section className={styles.section}>
+      <h2>2. Інформація, яку ми збираємо</h2>
+      <p>Ми збираємо дані, які ви надаєте нам, зокрема:</p>
+      <ul>
+        <li>Ім'я, електронна пошта та контактна інформація</li>
+        <li>Професійний досвід та освітній рівень</li>
+        <li>Переваги щодо вакансій та кар'єрні цілі</li>
+        <li>Дані профілів, резюме, вакансії та відгуки</li>
+        <li>Системні дані: IP-адреса, геолокація та дії на платформі</li>
+      </ul>
+    </section>
 
-        <section className={styles.section}>
-          <h2>3. How We Use Your Information</h2>
-          <p>We use your information to:</p>
-          <ul>
-            <li>Provide and improve our services</li>
-            <li>Match you with potential job opportunities or candidates</li>
-            <li>Communicate with you about our services</li>
-            <li>Analyze and improve our website and services</li>
-          </ul>
-        </section>
+    <section className={styles.section}>
+      <h2>3. Як ми використовуємо вашу інформацію</h2>
+      <p>Ми використовуємо вашу інформацію для:</p>
+      <ul>
+        <li>Надання доступу до наших послуг</li>
+        <li>Пошуку та рекомендації ідеальних вакансій чи кандидатів</li>
+        <li>Комунікації щодо сервісів</li>
+        <li>Аналізу та вдосконалення нашого вебсайту</li>
+        <li>Формування рейтингів та рекомендацій за допомогою ШІ</li>
+      </ul>
+    </section>
 
-        <section className={styles.section}>
-          <h2>4. Information Sharing and Disclosure</h2>
-          <p>We may share your information with:</p>
-          <ul>
-            <li>Employers or job seekers, as appropriate for our services</li>
-            <li>Service providers who assist in our operations</li>
-            <li>Legal authorities when required by law</li>
-          </ul>
-        </section>
+    <section className={styles.section}>
+      <h2>4. Розкриття інформації</h2>
+      <p>Ми можемо розкривати вашу інформацію:</p>
+      <ul>
+        <li>Роботодавцям або шукачам роботи в рамках надання наших послуг</li>
+        <li>Постачальникам послуг, які допомагають нам в операційній діяльності</li>
+        <li>Юридичним органам у випадках, передбачених законом</li>
+      </ul>
+    </section>
 
-        <section className={styles.section}>
-          <h2>5. Data Security</h2>
-          <p>We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
-        </section>
+    <section className={styles.section}>
+      <h2>5. Захист даних</h2>
+      <p>Ми використовуємо сучасні технології для захисту ваших даних, включаючи шифрування та багатофакторну автентифікацію. Проте жоден метод передачі даних через Інтернет чи електронне зберігання не є 100% безпечним.</p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>6. Your Rights</h2>
-          <p>You have the right to access, correct, or delete your personal information. You may also have the right to restrict or object to certain processing of your data. To exercise these rights, please contact us using the information provided below.</p>
-        </section>
+    <section className={styles.section}>
+      <h2>6. Ваші права</h2>
+      <p>Ви маєте право:</p>
+      <ul>
+        <li>Доступу до ваших персональних даних</li>
+        <li>Виправлення або видалення вашої інформації</li>
+        <li>Обмеження обробки ваших даних або заперечення проти її використання</li>
+      </ul>
+      <p>Для реалізації цих прав звертайтеся до нас за вказаними контактами.</p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>7. Changes to This Privacy Policy</h2>
-          <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
-        </section>
+    <section className={styles.section}>
+      <h2>7. Використання ШІ</h2>
+      <p>Наш вбудований ШІ використовує ваші публічні дані для аналітики, пошуку відповідностей і формування рекомендацій. Дані зберігаються лише в рамках платформи і не передаються стороннім сервісам.</p>
+    </section>
 
-        <section className={styles.section}>
-          <h2>8. Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-          <p>Email: privacy@ujob.com</p>
-          <p>Address: 123 Ujob Street, Kyiv, Ukraine 01001</p>
-        </section>
-      </div>
-    </Layout>
+    <section className={styles.section}>
+      <h2>8. Зміни до цієї Політики конфіденційності</h2>
+      <p>Ми можемо час від часу оновлювати цю Політику. Про зміни ми повідомлятимемо, публікуючи оновлену версію на цій сторінці та оновлюючи дату останнього оновлення.</p>
+    </section>
+
+    <section className={styles.section}>
+      <h2>9. Контакти</h2>
+      <p>Якщо у вас є запитання щодо цієї Політики конфіденційності, звертайтеся до нас:</p>
+      <p>Email: privacy@ujob.com</p>
+      <p>Адреса: вул. Ujob, 123, Київ, Україна, 01001</p>
+    </section>
+  </div>
+</Layout>
   );
 };
 
