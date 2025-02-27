@@ -1,6 +1,6 @@
-header {
+.header {
   display: flex;
-  justify-content: space-between;
+  justify-content: stretch;
   align-items: center;
   padding: 1rem 2rem;
   position: fixed;
@@ -11,28 +11,28 @@ header {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.scrolled {
-  background-color: rgba(14, 6, 20, 0.7);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 .logo {
-  font-weight: bold;
-  text-transform: uppercase;
-  position: absolute;
-  left: 50%;
+  position: flex;
   transform: translateX(-50%);
+
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .logoText {
   color: #ffffff;
   font-size: 2.8rem;
-  margin-left: 5px;
   font-weight: bold;
   font-family: "Orbitron";
   animation: blink 1s infinite;
   text-decoration: none;
+
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @keyframes blink {
@@ -48,82 +48,53 @@ header {
 }
 
 .nav {
+  display: none; /* Початково приховуємо меню */
+}
+
+.nav.open {
   display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(14, 6, 20, 0.95);
+  padding: 2rem;
   gap: 1rem;
-}
-
-.nav a {
-  color: var(--foreground);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-.nav a:hover {
-  color: #7297bd;
-}
-
-.actions {
-  display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .menuToggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  width: 3rem;
+  height: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
+
+  padding-top: 7px;
+  padding-left: 35px;
 }
 
-.menuToggle span {
+.menuToggle svg {
+  fill: #ffffff;
   width: 2rem;
-  height: 0.25rem;
-  background: white;
-  border-radius: 10px;
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
+  height: 2rem;
 }
 
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(14, 6, 20, 0.95);
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
-  }
-
-  .nav.open {
-    transform: translateX(0);
-  }
-
+@media (min-width: 2768px) {
   .menuToggle {
+    display: none;
+  }
+  .nav {
     display: flex;
-  }
-
-  .menuToggle.open span:first-child {
-    transform: rotate(45deg);
-  }
-
-  .menuToggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menuToggle.open span:nth-child(3) {
-    transform: rotate(-45deg);
+    gap: 1rem;
   }
 }
