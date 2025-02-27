@@ -10,18 +10,22 @@
   border-radius: 25px;
   box-shadow: 0 14px 10px rgba(0, 0, 0, 0.4);
   transition: 0.4s ease-in-out;
+  border: 0px solid black;
 }
 
 .form:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
   border: 1px solid black;
 }
 
 #heading {
+  margin: 0.3rem;
+  margin-top: 15px;
+  font-size: 1.5em;
+  font-size: 2rem;
+  color: var(--foreground);
   text-align: center;
-  margin: 2em;
-  color: rgb(255, 255, 255);
-  font-size: 1.2em;
+  font-weight: bolder;
 }
 
 .field {
@@ -32,6 +36,7 @@
   border-radius: 25px;
   padding: 0.6em;
   border: none;
+  border-color: #252525;
   outline: none;
   color: white;
   background-color: #171717;
@@ -76,7 +81,7 @@ input {
 }
 
 .button1:hover {
-  background-color: black;
+  background-color: rgb(59, 139, 192);
   color: white;
 }
 
@@ -93,7 +98,7 @@ input {
 }
 
 .button2:hover {
-  background-color: black;
+  background-color: rgb(6, 34, 71);
   color: white;
 }
 
@@ -109,6 +114,6 @@ input {
 }
 
 .button3:hover {
-  background-color: red;
+  background-color: rgb(51, 51, 51);
   color: white;
 }

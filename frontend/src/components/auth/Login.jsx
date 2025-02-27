@@ -9,7 +9,7 @@ const Form = () => {
   return (
     <div className={styles.styledWrapper}>
       <form className={styles.form}>
-        <p id={styles.heading}>Login</p>
+        <p id={styles.heading}>Вхід</p>
         <div className={styles.field}>
           <svg
             className={styles.inputIcon}
