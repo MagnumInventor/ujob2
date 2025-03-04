@@ -78,7 +78,7 @@ export default function RegistrationForm() {
         </div>
 
         <div className={styles.formGroup}>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Пошта</label>
           <input
             type="email"
             id="email"
