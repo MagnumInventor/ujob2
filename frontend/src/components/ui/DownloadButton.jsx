@@ -1,15 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'; // Використовуйте styled-components для стилів
 
 const Button = () => {
   return (
     <StyledWrapper>
       <button className="button">
-        <span className="button-content">Download </span>
+        <span className="button-content">Download</span>
       </button>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
   .button {
@@ -50,6 +50,8 @@ const StyledWrapper = styled.div`
       rgba(99, 88, 238, 1) 94.3%
     );
     transition: all 0.475s;
-  }`;
+  }
+`;
 
 export default Button;
+
