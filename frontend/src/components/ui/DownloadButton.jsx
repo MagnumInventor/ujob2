@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'; // Використовуйте styled-components для стилів
+import styled from 'styled-components'; 
 
 const Button = () => {
   return (

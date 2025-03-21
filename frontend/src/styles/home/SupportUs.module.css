@@ -3,6 +3,7 @@
 }
 
 .title {
+  padding-top: 100px;
   font-size: 3rem;
   margin-bottom: 2rem;
   color: var(--foreground);
@@ -92,4 +93,3 @@
     max-width: 300px;
   }
 }
-

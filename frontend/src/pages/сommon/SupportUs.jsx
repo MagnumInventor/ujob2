@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from '../../styles/home/SupportUs.module.css';
 import Layout from '../../components/Layout';
-import DownloadButton from '../../components/ui/DownloadButton'; // Припускаю, що цей компонент вже готовий
+import DownloadButton from '../../components/ui/DownloadButton'; 
 
 export default function SupportUs() {
   return (
@@ -31,8 +31,6 @@ export default function SupportUs() {
           <h2>Документи для Ознайомлення</h2>
           <p>Ми підготували для вас інформаційні документи, щоб ви могли дізнатися більше про наш проект:</p>
           <div className={styles.downloadButtons}>
-            <DownloadButton filePath="frontend\src\data\documents\ABusiness Plan of Ujob.pdf" label="Завантажити бізнес-план проекту" />
-            <DownloadButton filePath="/documents/donation_guide.pdf" label="Завантажити Інструкцію для Донорів" />
           </div>
         </div>
         <div className={styles.monobankEmbed}>
