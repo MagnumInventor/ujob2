@@ -5,7 +5,7 @@ const Button = () => {
   return (
     <StyledWrapper>
       <button className="button">
-        <span className="button-content">Download</span>
+        <span className="button-content">Скачати</span>
       </button>
     </StyledWrapper>
   );
