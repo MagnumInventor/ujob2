@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'; 
+import styled from 'styled-components';
 
 const Button = () => {
   return (
@@ -19,7 +19,7 @@ const StyledWrapper = styled.div`
     padding: 0 2rem;
     border-radius: 1.5rem;
     background: #3d3a4e;
-    background-size: 400%;
+    background-size: 380%;
     color: #fff;
     border: none;
     cursor: pointer;
